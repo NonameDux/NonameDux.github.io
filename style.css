@@ -1,0 +1,425 @@
+/* Минимальные стили для функциональности: */
+
+body{
+    --cherry: rgb(199, 0, 106);
+    background-image: url("bg_tile.png");
+    background-size: 120px;
+    background-repeat: repeat;
+}
+
+
+.image-gallery img:hover {
+    transform: scale(1.05);
+    border-color: #555;
+}
+
+/* Класс для скрытия элементов */
+.hidden {
+    display: none !important;
+}
+
+/* --- СТИЛИ МОДАЛЬНОГО ОКНА (Оверлей) --- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Темный полупрозрачный фон */
+    display: flex; /* Flexbox для идеального центрирования */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 10px;
+}
+
+/* Содержимое модального окна */
+.modal-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    width: 80%;
+    height: auto;
+    overflow: auto;
+    position: relative;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.3s ease-out; /* Анимация появления */
+}
+
+/* Анимация появления */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.modal-content img {
+    display: block;
+    border-radius: 6px;
+}
+.landscape {
+    max-width: 50%; /* Шире, чтобы вместить горизонтальную картинку */
+}
+
+/* Для ВЕРТИКАЛЬНЫХ (PORTRAIT) изображений */
+.portrait {
+    max-width: 30%;
+    max-height: 50%;
+}
+
+/* Кнопка закрытия (Крестик) */
+.close-btn {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 32px;
+    cursor: pointer;
+    color: #333;
+    line-height: 1;
+    padding: 5px;
+    transition: color 0.2s;
+}
+.close-btn:hover {
+    color: #ff0000;
+}
+
+/* Описание */
+.modal-description {
+    margin-top: 15px;
+    color: #555;
+    font-style: italic;
+    text-align: center;
+    padding: 0 10px;
+    width: 65%;
+}
+.modal-heading {
+    margin-top: 15px;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    padding: 0 10px;
+    width: 65%;
+}
+.model-text{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+/* Базовое выделение активной вкладки */
+.tab-btn.active {
+    font-weight: bold;
+    background-color: white;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.304);
+}
+/* Общий контейнер для видимости и разделения */
+.container {
+    padding: 10px;
+    width: 90%;
+}
+/* Стиль для списка вкладок */
+.tab-list{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.modal-image{
+
+    width: 50%;
+
+}
+.tab-list button {
+    transition: all 0.2s ease-out;
+    cursor: pointer;
+    padding: 8px 10px;
+    margin: 0 15px 15px 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    background-color: rgb(255, 211, 219);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.304);
+    color: rgb(200, 24, 89);
+}
+.tab-list button:hover{ 
+    background-color: rgb(255, 220, 227);
+    box-shadow: 3.5px 3.5px 3.5px rgba(0, 0, 0, 0.304);
+}
+/* Стиль для содержимого вкладок */
+.tab-content {
+    padding: 15px;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.304);
+    margin: 0;
+}
+.main-wrapper{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+}
+h2{
+    color: var(--cherry);
+    font-family: "Great Vibes";
+    font-size: 200%;
+}
+p{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#Frame1{
+    font-size: 1.3em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin-left: 5%;
+
+}
+#Gallery{
+    padding: 5px;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+}
+#G{
+    transition: all .2s ease-out;
+    margin: 20px;
+    height: 55vh;
+    border-radius: 20px;
+    
+
+}
+#G:hover{
+    cursor: pointer;
+    border-radius: 15px;
+    border: 3px var(--cherry) solid;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.304);
+
+}
+hr{
+
+    width: 70%;
+    height: .5px;
+    background-color: var(--cherry);
+
+}
+/* КОНТЕЙНЕР ДЛЯ ПЛЕЙЛИСТА И ПЛЕЕРА */
+.player-wrapper {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start; /* Выравнивание по верхнему краю */
+    justify-content: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* СТИЛИ ПЛЕЙЛИСТА */
+.playlist-container {
+    width: 33%;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#playlist-list {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    font-size: 0.7em;
+    font-weight: 400;
+}
+
+.playlist-item {
+    padding: 8px 10px;
+    cursor: pointer;
+    border-radius: 6px;
+    margin-bottom: 5px;
+    transition: background-color 0.2s, color 0.2s;
+    font-size: 14px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.playlist-item:hover {
+    background-color: #e9e9e9;
+}
+
+.playlist-item.active {
+    background-color: var(--cherry);
+    color: white;
+    font-weight: bold;
+}
+
+
+/* 1. КОНТЕЙНЕР ПЛЕЕРА */
+.custom-player {
+    width: 350px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    /* Распределение элементов по вертикали */
+    justify-content: space-between; 
+    min-height: 250px; 
+    
+}
+
+/* Скрываем стандартный элемент <audio> */
+#audio-element {
+    display: none;
+}
+
+/* Заголовок и описание (СВЕРХУ) */
+#song-title {
+    text-align: center;
+    margin: 0 0 5px 0;
+    color: #333;
+}
+
+.song-description {
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+    margin: 0 0 20px 0;
+}
+
+/* 2. КНОПКА PLAY/PAUSE (ВНИЗУ) */
+.play-pause-btn {
+    background-color: var(--cherry);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    cursor: pointer;
+    /* Выталкиваем кнопку вниз */
+    margin-top: auto; 
+    align-self: center; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.play-pause-btn:hover {
+    box-shadow: 2 4px 8px rgba(0, 0, 0, 0.4);
+    transform: scale(1.05);
+    filter: brightness(0.9);
+}
+.play-pause-btn:active {
+    transform: scale(0.95);
+}
+
+/* 3. ПОЛОСА ПРОГРЕССА (ПО СЕРЕДИНЕ) */
+.progress-bar-container {
+    height: 8px;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%; 
+    background-color: var(--cherry);
+    border-radius: 4px;
+    transition: width 0.1s linear; 
+}
+
+/* 4. ИНФОРМАЦИЯ О ВРЕМЕНИ */
+.time-display {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #777;
+    margin-bottom: 20px;
+}
+.accordion-container {
+    width: 500px;
+    max-width: 100%;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden; /* Важно для работы анимации! */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* СТИЛЬ ЗАГОЛОВКА (Кнопка) */
+.accordion-header {
+    padding: 15px 20px;
+    background-color: var(--cherry);
+    color: #333;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+    user-select: none; /* Запрет выделения текста */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.2s;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: White;
+}
+
+.accordion-header:hover {
+    background-color: #dcdcdc;
+}
+
+/* СТРЕЛКА-ИНДИКАТОР */
+.arrow {
+    transition: transform 0.3s;
+    font-size: 1.2em;
+}
+
+/* Поворачиваем стрелку, когда панель активна */
+.accordion-header.active .arrow {
+    transform: rotate(180deg);
+}
+
+/* --- СКРЫВАЕМОЕ СОДЕРЖИМОЕ (САМЫЙ ВАЖНЫЙ БЛОК) --- */
+.accordion-content {
+    background-color: #ffffff;
+    /* Начальная высота 0, чтобы скрыть содержимое */
+    max-height: 0; 
+    overflow: hidden;
+    /* Плавный переход для высоты */
+    transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+    padding: 0 20px; /* Изначально 0, чтобы избежать вертикального отступа */
+}
+
+/* Стиль текста внутри содержимого */
+.accordion-content p {
+    margin: 15px 0;
+    line-height: 1.5;
+    color: #555;
+}
+
+/* Класс, который добавляет JavaScript при клике */
+.accordion-content.show {
+    /* Устанавливаем высоту, превышающую максимальное ожидаемое содержимое. */
+    /* Это ключевой момент для анимации. */
+    max-height: 500px; 
+    padding: 15px 20px; /* Добавляем отступы, чтобы контент был виден */
+}
+#tab-content-4{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

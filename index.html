@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>Wow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+        <div id="login">
+            <p align="center">Ну-ка, Принцесса,<BR> вспоминай секретный код!</p>
+            <input type="text" id="input-field" placeholder="Вводить сюда">
+            <button id="check-button">Вперёд</button>
+            <p id="message"></p>
+        </div>
+    <script>
+        // Ссылки на элементы DOM
+        const inputField = document.getElementById('input-field');
+        const checkButton = document.getElementById('check-button');
+        const messageElement = document.getElementById('message');
+
+        // Секретное слово и целевая страница
+        const SECRET_WORD = "Дайсон";
+        const TARGET_URL = "secret.html";
+        
+        /**
+         * Проверяет введенный текст и выполняет перенаправление.
+         */
+        function checkSecretCode() {
+            // 1. Получаем значение из поля ввода и очищаем его от пробелов в начале/конце
+            const enteredText = inputField.value.trim();
+            
+            // 2. Выполняем проверку
+            if (enteredText === SECRET_WORD) {
+                // Успех! Обновляем сообщение и перенаправляем.
+                messageElement.textContent = "Код верный! Перенаправление...";
+                messageElement.style.color = "#28a745"; // Зеленый цвет
+                
+                // Перенаправление на secret.html
+                window.location.href = TARGET_URL; 
+                
+            } else {
+                // Ошибка. Показываем сообщение.
+                messageElement.textContent = "Неверный код. Попробуйте еще раз.";
+                messageElement.style.color = "#dc3545"; // Красный цвет
+                inputField.value = ""; // Очищаем поле
+            }
+        }
+
+        // 3. Назначаем обработчик события клика
+        checkButton.addEventListener('click', checkSecretCode);
+        
+        // Опционально: Проверка по нажатию Enter в поле ввода
+        inputField.addEventListener('keypress', function(event) {
+            // Код клавиши Enter - 13
+            if (event.key === 'Enter') {
+                checkSecretCode();
+            }
+        });
+
+    </script>
+</body>
+</html>

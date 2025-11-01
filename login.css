@@ -1,0 +1,81 @@
+
+
+body{
+    --cherry: rgb(199, 0, 106);
+    background-color: pink;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    font-family: Arial;
+    font-size: 15;
+    color:var(--cherry);
+    font-weight: bold;
+
+}
+p{
+    font-family: "Great Vibes";
+    font-style: normal;
+    font-size: 150%;
+    margin: 5px;
+}
+#message{
+    font-size: 100%;
+}
+#login{
+    background-color:white ;
+    width: 30%;
+    height: 40%;
+    min-width: 300px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 10px;
+    border-color: white;
+    border-width: 2.5px;
+    border-style: solid;
+    box-shadow: 4px 4px 4px rgba(58, 58, 58, 0.246);
+    }
+.text{
+    transition:all .5s ease-out ;
+    margin: 10px;
+    margin-bottom: 20px;
+    border: 0;
+    border-radius: 5px;
+    height: 25px;
+    width: 80%;
+    outline: 2px var(--cherry) solid;
+}
+
+button{
+    transition:all .5s ease-out ;
+    width: 40%;
+    height: 30px;
+    background-color:var(--cherry);
+    color: white;
+    border:0;
+    border-radius: 5px;
+
+}
+button:hover{
+    transition:all .5s ease-out ;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px rgba(58, 58, 58, 0.246);
+
+}
+.text:hover{
+    transition:all .5s ease-in ;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px rgba(58, 58, 58, 0.246);
+
+}
+.text:focus{
+    transition:all .5s ease-in ;
+    border-radius: 5px;
+    text-decoration: none;
+    box-shadow: 2px 2px 2px rgba(58, 58, 58, 0.246);
+
+}

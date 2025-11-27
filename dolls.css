@@ -1,12 +1,11 @@
 :root {
-    /* Палитра вдохновленная MH и MLP */
-    --primary-color: #ff7eb3; /* Мягкий розовый */
-    --secondary-color: #7afcff; /* Голубой циановый */
+    --primary-color: #ff7eb3;
+    --secondary-color: #7afcff;
     --accent-purple: #a55eea;
     --text-dark: #2d3436;
     --text-gray: #636e72;
-    --bg-color: #fce4ec; /* Очень светлый розовый фон */
-    --card-bg: rgba(255, 255, 255, 0.9);
+    --bg-color: #fff0f5;
+    --card-bg: #ffffff;
     --gold: #f1c40f;
     --danger: #ff7675;
 }
@@ -14,32 +13,55 @@
 body {
     font-family: 'Nunito', sans-serif;
     background: linear-gradient(135deg, #fff0f5 0%, #e0f7fa 100%);
-    background-attachment: fixed; /* Фон стоит на месте при скролле */
+    background-attachment: fixed;
     margin: 0;
     color: var(--text-dark);
     padding-bottom: 50px;
+    transition: background 0.5s ease, color 0.5s ease;
 }
 
-/* --- ПАСХАЛКА: Magic Mode (Темная тема MH) --- */
+/* --- MAGIC MODE (ИСПРАВЛЕННЫЙ) --- */
 body.magic-mode {
-    background: linear-gradient(135deg, #2d3436 0%, #6c5ce7 100%);
-    --card-bg: rgba(0, 0, 0, 0.8);
-    --text-dark: #fff;
-    --text-gray: #dfe6e9;
-}
-.floating-icon {
-    position: fixed;
-    font-size: 2rem;
-    color: var(--gold);
-    display: none;
-    z-index: 9999;
-}
-@keyframes floatUp {
-    0% { transform: translateY(0) rotate(0deg); opacity: 1; }
-    100% { transform: translateY(-100px) rotate(20deg); opacity: 0; }
+    /* Темный графитовый фон в стиле Monster High */
+    background: linear-gradient(135deg, #1e272e 0%, #485460 100%); 
+    
+    /* Переопределение переменных для темной темы */
+    --text-dark: #ffffff;      /* Белый текст заголовков */
+    --text-gray: #d2dae2;      /* Светло-серый текст описания */
+    --card-bg: #2d3436;        /* Темный фон карточки */
+    --primary-color: #ff007f;  /* Ядовито-розовый */
 }
 
-/* --- ХЕДЕР --- */
+/* Исправление кнопок в Magic Mode */
+body.magic-mode .filters button {
+    background: #485460;
+    color: white;
+    box-shadow: none;
+    border: 1px solid #57606f;
+}
+body.magic-mode .filters button.active {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+}
+body.magic-mode .search-box input {
+    background: #485460;
+    color: white;
+    border-color: #57606f;
+}
+body.magic-mode .controls-section {
+    background: rgba(0, 0, 0, 0.4); /* Затемненная панель */
+    border: 1px solid rgba(255,255,255,0.1);
+}
+body.magic-mode select {
+    background: #485460;
+    color: white;
+    border: 1px solid #57606f;
+}
+
+/* --- ОБЩИЕ СТИЛИ --- */
+
+/* Header */
 header {
     text-align: center;
     padding: 40px 20px;
@@ -53,6 +75,7 @@ header h1 {
     -webkit-text-fill-color: transparent;
     cursor: pointer;
     transition: transform 0.3s;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
 }
 header h1:hover { transform: scale(1.05); }
 header p {
@@ -60,248 +83,152 @@ header p {
     letter-spacing: 2px;
     font-size: 0.9rem;
     text-transform: uppercase;
+    font-weight: 700;
 }
 
-/* --- ПАНЕЛЬ УПРАВЛЕНИЯ --- */
+/* Controls */
 .controls-section {
     max-width: 1000px;
     margin: 0 auto 40px;
     padding: 20px;
-    background: rgba(255,255,255,0.6);
+    background: rgba(255,255,255,0.7);
     backdrop-filter: blur(10px);
     border-radius: 25px;
     box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
     display: flex;
     flex-direction: column;
     gap: 20px;
+    transition: background 0.5s;
 }
 
-.search-box {
-    position: relative;
-    width: 100%;
-}
+.search-box { position: relative; width: 100%; }
 .search-box i {
-    position: absolute;
-    left: 15px;
-    top: 50%;
-    transform: translateY(-50%);
+    position: absolute; left: 15px; top: 50%; transform: translateY(-50%);
     color: var(--primary-color);
 }
 .search-box input {
-    width: 100%;
-    padding: 15px 15px 15px 45px;
-    border: 2px solid #fff;
-    border-radius: 15px;
-    font-size: 1rem;
-    outline: none;
-    background: rgba(255,255,255,0.8);
-    transition: all 0.3s;
-    font-family: inherit;
-    box-sizing: border-box;
-}
-.search-box input:focus {
-    border-color: var(--primary-color);
-    box-shadow: 0 0 15px rgba(255, 126, 179, 0.3);
+    width: 100%; padding: 15px 15px 15px 45px;
+    border: 2px solid transparent;
+    border-radius: 15px; font-size: 1rem; outline: none;
+    background: white; transition: all 0.3s;
+    font-family: inherit; box-sizing: border-box;
 }
 
-.filters {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
+.filters { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
 .filters button {
-    border: none;
-    background: white;
-    padding: 10px 20px;
-    border-radius: 20px;
-    font-weight: 700;
-    color: var(--text-gray);
-    cursor: pointer;
-    transition: all 0.2s;
+    border: none; background: white; padding: 10px 20px;
+    border-radius: 20px; font-weight: 700; color: #636e72;
+    cursor: pointer; transition: all 0.2s;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
-.filters button.active, .filters button:hover {
-    background: var(--primary-color);
-    color: white;
-    transform: translateY(-2px);
+.filters button.active {
+    background: var(--primary-color); color: white;
 }
 select {
-    padding: 10px;
-    border-radius: 20px;
-    border: 1px solid #eee;
-    font-family: inherit;
-    color: var(--text-dark);
+    padding: 10px; border-radius: 20px; border: 1px solid #eee;
+    font-family: inherit; cursor: pointer;
 }
 
-/* --- СЕТКА ТОВАРОВ --- */
+/* Grid & Card */
 .doll-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    max-width: 1200px; margin: 0 auto; padding: 0 20px;
 }
 
-/* --- КАРТОЧКА --- */
 .card {
     background: var(--card-bg);
-    border-radius: 20px;
-    overflow: hidden;
+    border-radius: 20px; overflow: hidden;
     box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-    transition: transform 0.3s, box-shadow 0.3s;
-    display: flex;
-    flex-direction: column;
-    border: 1px solid rgba(255,255,255,0.5);
+    transition: transform 0.3s, background 0.5s;
+    display: flex; flex-direction: column;
 }
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-}
+.card:hover { transform: translateY(-10px); }
 
 .card-img-box {
-    height: 350px;
-    position: relative;
-    cursor: pointer;
-    overflow: hidden;
+    height: 350px; position: relative; cursor: pointer; overflow: hidden;
 }
 .card-img-box img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s;
+    width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;
 }
-.card:hover .card-img-box img {
-    transform: scale(1.08);
-}
+.card:hover .card-img-box img { transform: scale(1.08); }
 
-/* Лейблы на фото */
 .status-label {
-    position: absolute;
-    top: 15px; left: 15px;
-    padding: 5px 12px;
-    border-radius: 12px;
-    font-size: 0.8rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: white;
-    z-index: 2;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    position: absolute; top: 15px; left: 15px;
+    padding: 5px 12px; border-radius: 12px;
+    font-size: 0.8rem; font-weight: bold; text-transform: uppercase;
+    color: white; z-index: 2;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 .type-stock .status-label { background: #00b894; }
-.type-preorder .status-label { background: var(--gold); color: #5d4037; }
+.type-preorder .status-label { background: #fdcb6e; color: #5d4037; }
 
-.multi-icon {
-    position: absolute; top: 15px; right: 15px;
-    background: rgba(0,0,0,0.6);
-    color: white; padding: 4px 10px; border-radius: 10px;
-    font-size: 0.8rem; z-index: 2;
-}
-
-/* Оверлей при наведении */
 .hover-overlay {
     position: absolute; top:0; left:0; width:100%; height:100%;
     background: rgba(0,0,0,0.2);
     display: flex; justify-content: center; align-items: center;
     opacity: 0; transition: opacity 0.3s;
 }
-.hover-overlay i { font-size: 3rem; color: white; opacity: 0.8; }
+.hover-overlay i { font-size: 3rem; color: white; }
 .card-img-box:hover .hover-overlay { opacity: 1; }
 
-/* Контент карточки */
-.card-body {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-}
+/* Card Content */
+.card-body { padding: 20px; display: flex; flex-direction: column; flex-grow: 1; }
 .card-title {
-    margin: 0 0 10px;
-    font-size: 1.2rem;
-    font-family: 'Comfortaa', cursive;
-    color: var(--text-dark);
+    margin: 0; font-size: 1.2rem;
+    font-family: 'Comfortaa', cursive; color: var(--text-dark);
 }
 
-/* Блок цены */
-.price-block {
-    display: flex;
-    align-items: baseline;
-    gap: 10px;
-    margin-bottom: 10px;
+/* Мета данные (комменты и фото) */
+.card-meta {
+    display: flex; gap: 15px; margin: 8px 0;
+    font-size: 0.85rem; color: var(--text-gray); opacity: 0.8;
 }
-.main-price {
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: var(--primary-color);
-}
-.delivery {
-    font-size: 0.8rem;
-    background: #fff3cd;
-    color: #856404;
-    padding: 2px 6px;
-    border-radius: 5px;
-}
+.card-meta span { display: flex; align-items: center; gap: 5px; }
 
-/* Стан (Condition) */
 .condition-badge {
     background: linear-gradient(45deg, #a29bfe, #74b9ff);
-    color: white;
-    padding: 8px;
-    border-radius: 10px;
-    font-size: 0.9rem;
-    margin-bottom: 10px;
-    display: inline-block;
-    font-weight: 600;
+    color: white; padding: 6px 10px; border-radius: 10px;
+    font-size: 0.85rem; margin-bottom: 10px; display: inline-block;
+    font-weight: 600; align-self: flex-start;
 }
 
-/* Текст (Скроллбар) */
-.card-text {
-    font-size: 0.95rem;
-    color: var(--text-gray);
-    line-height: 1.5;
-    max-height: 120px; /* Ограничение высоты */
-    overflow-y: auto; /* Скролл */
-    margin-bottom: 20px;
-    padding-right: 5px;
+.price-block {
+    display: flex; align-items: baseline; gap: 10px; margin-bottom: 10px;
 }
-/* Красивый скроллбар */
+.main-price {
+    font-size: 1.5rem; font-weight: 800; color: var(--primary-color);
+}
+.delivery {
+    font-size: 0.8rem; background: #fff3cd; color: #856404;
+    padding: 2px 6px; border-radius: 5px;
+}
+
+.card-text {
+    font-size: 0.95rem; color: var(--text-gray);
+    line-height: 1.5; max-height: 100px; overflow-y: auto;
+    margin-bottom: 20px; padding-right: 5px;
+}
 .card-text::-webkit-scrollbar { width: 4px; }
 .card-text::-webkit-scrollbar-thumb { background: #dfe6e9; border-radius: 2px; }
 
 .buy-btn {
     margin-top: auto;
     background: var(--text-dark);
-    color: white;
-    text-align: center;
-    padding: 12px;
-    border-radius: 12px;
-    text-decoration: none;
-    font-weight: 700;
-    transition: 0.3s;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    color: white; /* Всегда белый текст на кнопке */
+    text-align: center; padding: 12px; border-radius: 12px;
+    text-decoration: none; font-weight: 700; transition: 0.3s;
 }
-.buy-btn:hover {
+/* В magic mode кнопка становится розовой для контраста */
+body.magic-mode .buy-btn {
     background: var(--primary-color);
-    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
-    transform: translateY(-2px);
+    color: white;
 }
+.buy-btn:hover { opacity: 0.9; transform: translateY(-2px); }
 
-/* Лайтбокс */
-.lightbox {
-    position: fixed; top:0; left:0; width:100%; height:100%;
-    background: rgba(0,0,0,0.9);
-    z-index: 2000;
-    display: none; justify-content: center; align-items: center;
-}
-.lightbox.active { display: flex; animation: fadeIn 0.3s; }
-.lightbox-content { max-width: 90%; max-height: 90vh; border-radius: 10px; }
-.close-btn { position: absolute; top:20px; right:30px; color:white; font-size:40px; cursor:pointer;}
-
-@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-
-/* Mobile */
-@media(max-width:600px) {
-    header h1 { font-size: 2rem; }
-    .controls-section { padding: 15px; }
+/* Icons for Easter Egg */
+.floating-icon {
+    position: fixed; font-size: 2rem; color: var(--gold);
+    display: none; z-index: 9999;
 }

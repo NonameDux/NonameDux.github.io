@@ -1,0 +1,110 @@
+[
+    {
+        "id": 2101,
+        "text": "🫧Лот 🫧\n\nДью дроп база, Світі бель, Рейнбоу база\n\nЦіна: 1530 + 200 дс\n\n#передзамовлення",
+        "photo_path": "static/doll_images/2101_photo.jpg",
+        "is_preorder": true,
+        "link": "https://t.me/kabi_mlp/2101",
+        "price": "1530",
+        "delivery_price": "200"
+    },
+    {
+        "id": 2091,
+        "text": "🫧 Лот 🫧\n\nДейзі крилатка, купа г2, г3, г3.5\n\nЦіна: 2980 + 300 дс\n\n#передзамовлення",
+        "photo_path": "static/doll_images/2091_photo.jpg",
+        "is_preorder": true,
+        "link": "https://t.me/kabi_mlp/2091",
+        "price": "2980",
+        "delivery_price": "300"
+    },
+    {
+        "id": 2070,
+        "text": "🫧 Лот егм 🫧\n\nАдажіо, Тріксі, Дерпі, Сансет\n\nЦіна: 4480 + 250 дс\n\n#передзамовлення",
+        "photo_path": "static/doll_images/2070_photo.jpg",
+        "is_preorder": true,
+        "link": "https://t.me/kabi_mlp/2070",
+        "price": "4480",
+        "delivery_price": "250"
+    },
+    {
+        "id": 2069,
+        "text": "🫧 Лот 🫧\n\nТемноволоса Флат, Твайлайт з замком, Твайлайт алікорн, Флатт рп\n\nЦіна: 990+ 250 дс\n\n#передзамовлення",
+        "photo_path": "static/doll_images/2069_photo.jpg",
+        "is_preorder": true,
+        "link": "https://t.me/kabi_mlp/2069",
+        "price": "990",
+        "delivery_price": "250"
+    },
+    {
+        "id": 2066,
+        "text": "🍦Світі Свірл🍦\n\nСтан: 9/10, маленькі вмятини на личку, плямка біля ока, чуть потертість\n\nЦіна: 800\n\n#наявність",
+        "photo_path": "static/doll_images/2066_photo.jpg",
+        "is_preorder": false,
+        "link": "https://t.me/kabi_mlp/2066",
+        "price": "800",
+        "delivery_price": null
+    },
+    {
+        "id": 2058,
+        "text": "🌟Старбім🌟\nз оріг аксами\n\nСтан: ідеальна, декілька коротких волосин\n\nЦіна: 1450\n\n#наявність",
+        "photo_path": "static/doll_images/2058_photo.jpg",
+        "is_preorder": false,
+        "link": "https://t.me/kabi_mlp/2058",
+        "price": "1450",
+        "delivery_price": null
+    },
+    {
+        "id": 2055,
+        "text": "🌸Флаттершай пасхальна🌸\n\nСтан: трохи стрижений хвостик, міні цятка\n\nЦіна: 600\n\n#наявність",
+        "photo_path": "static/doll_images/2055_photo.jpg",
+        "is_preorder": false,
+        "link": "https://t.me/kabi_mlp/2055",
+        "price": "600",
+        "delivery_price": null
+    },
+    {
+        "id": 2047,
+        "text": "✨Твайлайт від замку✨\n\nСтан: маленькі царапини\n\nЦіна: 230\n\n#наявність",
+        "photo_path": "static/doll_images/2047_photo.jpg",
+        "is_preorder": false,
+        "link": "https://t.me/kabi_mlp/2047",
+        "price": "230",
+        "delivery_price": null
+    },
+    {
+        "id": 2045,
+        "text": "🍎Епл Джек рп🍎\n\nСтан: ледь помітна плямка на копиті, трохи пухнастий хвостик\n\nЦіна: 160\n\n#наявність",
+        "photo_path": "static/doll_images/2045_photo.jpg",
+        "is_preorder": false,
+        "link": "https://t.me/kabi_mlp/2045",
+        "price": "160",
+        "delivery_price": null
+    },
+    {
+        "id": 2044,
+        "text": "💎Раріті пластик💎\n\nСтан: пухнастий хвостик\n\nЦіна: 180\n\n#наявність",
+        "photo_path": "static/doll_images/2044_photo.jpg",
+        "is_preorder": false,
+        "link": "https://t.me/kabi_mlp/2044",
+        "price": "180",
+        "delivery_price": null
+    },
+    {
+        "id": 2042,
+        "text": "🎉Пінкі г3.5🎉\n\nСтан: пару міні цяток\n\nЦіна: 80\n\n#наявність",
+        "photo_path": "static/doll_images/2042_photo.jpg",
+        "is_preorder": false,
+        "link": "https://t.me/kabi_mlp/2042",
+        "price": "80",
+        "delivery_price": null
+    },
+    {
+        "id": 2041,
+        "text": "💎Раріті ребут💎\n\nСтан: заводський дф на розі, може чуть стрижений хвостик, не великі тріщинки на очах\n\nЦіна: 80\n\n#наявність",
+        "photo_path": "static/doll_images/2041_photo.jpg",
+        "is_preorder": false,
+        "link": "https://t.me/kabi_mlp/2041",
+        "price": "80",
+        "delivery_price": null
+    }
+]

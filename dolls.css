@@ -72,7 +72,7 @@ header p {
 
 /* --- CONTROLS --- */
 .controls-section {
-    max-width: 1000px; margin: 0 12% 40px; padding: 20px;
+    max-width: 1250px; margin: 0 auto 40px; padding: 20px;
     background: rgba(255,255,255,0.7);
     backdrop-filter: blur(10px);
     border-radius: 25px;
@@ -230,4 +230,5 @@ body.magic-mode .item-count-display {
     border-top: 1px dashed rgba(255, 255, 255, 0.1);
     border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
 }
+
 

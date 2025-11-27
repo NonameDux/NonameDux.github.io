@@ -103,7 +103,7 @@ async def parse_channel():
     dolls_data = []
     processed_count = 0 
     
-    async for message in app.get_chat_history(CHANNEL_USERNAME, limit=60): 
+    async for message in app.get_chat_history(CHANNEL_USERNAME, limit=230): 
         
         processed_count += 1
         
@@ -212,3 +212,4 @@ async def parse_channel():
 if __name__ == "__main__":
 
     asyncio.run(parse_channel())
+

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💖 Капсула Желаний: Маркетплейс Кукол для моей любимой! 🤫</title>
+        
+    <link rel="stylesheet" href="dolls.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+</head>
+<body>
+
+    <header>
+        <h1>Секретный Маркетплейс для моей любимой! 🤫</h1>
+        <p>Здесь ты можешь посмотреть куклы с канала 🫧kabi_mlp🫧, отфильтровать их и намекнуть мне, что тебе понравилось. <br>
+            Я постарался сделать его максимально удобным и красивым, как ты любишь. ❤️</p>
+    </header>
+
+    <main>
+        <section id="marketplace">
+            <h2>🛍️ Каталог Кукол</h2>
+            
+            <div class="filter-controls">
+                <button id="filter-all" class="active" onclick="filterDolls('all')">Все</button>
+                <button id="filter-stock" onclick="filterDolls('stock')">В наличии</button>
+                <button id="filter-preorder" onclick="filterDolls('preorder')">Предзаказ</button>
+            </div>
+            
+            <div id="dolls-container" class="doll-grid">
+                <p>⌛ Загрузка каталога...</p>
+                </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Сделано с любовью и вниманием к деталям.</p>
+    </footer>
+    
+    <script>
+        // Весь JavaScript-код остался здесь, чтобы не плодить файлы
+        const JSON_URL = '/static/dolls_data.json';
+        let allDollsData = []; 
+        
+        // === ОСНОВНАЯ ФУНКЦИЯ ЗАГРУЗКИ ДАННЫХ ===
+        async function loadDolls() {
+            try {
+                const response = await fetch(JSON_URL);
+                
+                if (!response.ok) {
+                    throw new Error(`Ошибка загрузки: ${response.status} ${response.statusText}`);
+                }
+                
+                allDollsData = await response.json();
+                
+                // Сортировка
+                allDollsData.sort((a, b) => {
+                    if (a.is_preorder && !b.is_preorder) return -1;
+                    if (!a.is_preorder && b.is_preorder) return 1;
+                    return b.id - a.id; 
+                });
+
+                renderDolls(allDollsData); 
+
+            } catch (error) {
+                console.error("Не удалось загрузить данные кукол:", error);
+                document.getElementById('dolls-container').innerHTML = 
+                    '<p class="error-message">😔 Не удалось загрузить каталог. Пожалуйста, попробуй позже!</p>';
+            }
+        }
+
+        // === ФУНКЦИЯ ОТОБРАЖЕНИЯ КАРТОЧЕК ===
+        function renderDolls(dollsArray) {
+            const container = document.getElementById('dolls-container');
+            container.innerHTML = ''; 
+
+            if (dollsArray.length === 0) {
+                container.innerHTML = '<p>💖 В этой категории пока ничего нет. Загляни позже!</p>';
+                return;
+            }
+
+            dollsArray.forEach(doll => {
+                const card = document.createElement('div');
+                card.classList.add('doll-card');
+                
+                const isPreorder = doll.is_preorder;
+                const statusText = isPreorder ? '🔥 Предзаказ' : '✨ В наличии';
+                
+                // Очищаем текст от хештегов
+                const cleanedText = doll.text
+                    .replace(/#\w+/g, '') 
+                    .replace(/\n\s*\n/g, '\n') 
+                    .trim();
+
+                const title = cleanedText.split('\n')[0].trim() || "Кукла без названия";
+                
+                // Описание: берем весь текст после первой строки
+                let description = cleanedText.split('\n').slice(1).join('\n').trim();
+                if (description.length === 0) {
+                    description = cleanedText.trim();
+                }
+                description = description.length > 150 ? description.substring(0, 150).trim() + '...' : description;
+
+
+                // === БЛОК ЦЕНЫ ===
+                let priceHtml = '';
+                if (doll.price) {
+                    let deliveryTag = '';
+                    if (doll.delivery_price) {
+                        deliveryTag = `<span class="delivery-price">+ ${doll.delivery_price} дс</span>`;
+                    }
+                    
+                    priceHtml = `
+                        <div class="price-tag">
+                            <span class="main-price">${doll.price}</span>
+                            ${deliveryTag}
+                        </div>
+                    `;
+                }
+                // ===============================
+
+                card.innerHTML = `
+                    <div class="doll-status ${isPreorder ? 'preorder' : 'stock'}">${statusText}</div>
+                    <img src="${doll.photo_path || '/placeholder.jpg'}" alt="${title}">
+                    <div class="card-body">
+                        <h3>${title}</h3>
+                        ${priceHtml} 
+                        <p class="description">${description}</p>
+                    </div>
+                    <div class="card-actions">
+                        <a href="${doll.link}" target="_blank" class="buy-button">
+                            <i class="fas fa-shopping-cart"></i> ${isPreorder ? 'Обсудить предзаказ' : 'Купить'}
+                        </a>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        // === ФУНКЦИЯ ФИЛЬТРАЦИИ ===
+        function filterDolls(filterType) {
+            let filteredData = [];
+
+            // Сброс активного класса на кнопках
+            document.querySelectorAll('.filter-controls button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.getElementById(`filter-${filterType}`).classList.add('active');
+
+
+            if (filterType === 'all') {
+                filteredData = allDollsData;
+            } else if (filterType === 'stock') {
+                filteredData = allDollsData.filter(doll => !doll.is_preorder);
+            } else if (filterType === 'preorder') {
+                filteredData = allDollsData.filter(doll => doll.is_preorder);
+            }
+            
+            renderDolls(filteredData);
+        }
+
+        // Запускаем загрузку данных при открытии страницы
+        loadDolls();
+    </script>
+</body>
+</html>

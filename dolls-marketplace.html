@@ -3,134 +3,185 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>💖Маркетплейс Кукол для моей любимой! 🤫</title>
-        
+    <title>💖 Маркетплейс Кукол | Kabi MLP</title>
     <link rel="stylesheet" href="dolls.css">
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    
 </head>
 <body>
 
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="close-btn">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
     <header>
-        <h1>Секретный Маркетплейс для моей любимой! 🤫</h1>
-        <p>Здесь ты можешь посмотреть куклы с канала 🫧kabi_mlp🫧 <br>
-            Я подумал что ты довольно часто там сидишь а в тг неудобно. ❤️</p>
+        <div class="header-content">
+            <h1>Капсула Желаний 🫧</h1>
+            <p>Эксклюзивные куклы с канала <b>@kabi_mlp</b></p>
+        </div>
     </header>
 
     <main>
-        <section id="marketplace">
-            <h2>🛍️ Каталог Кукол</h2>
-            
-            <div class="filter-controls">
-                <button id="filter-all" class="active" onclick="filterDolls('all')">Все</button>
-                <button id="filter-stock" onclick="filterDolls('stock')">В наличии</button>
-                <button id="filter-preorder" onclick="filterDolls('preorder')">Предзаказ</button>
+        <section class="controls-section">
+            <div class="search-container">
+                <i class="fas fa-search"></i>
+                <input type="text" id="search-input" placeholder="Поиск по названию или описанию..." oninput="applyFilters()">
             </div>
-            
-            <div id="dolls-container" class="doll-grid">
-                <p>⌛ Загрузка каталога...</p>
+
+            <div class="actions-row">
+                <div class="filter-buttons">
+                    <button id="filter-all" class="active" onclick="setCategory('all')">Все</button>
+                    <button id="filter-stock" onclick="setCategory('stock')">В наличии</button>
+                    <button id="filter-preorder" onclick="setCategory('preorder')">Предзаказ</button>
                 </div>
+
+                <div class="sort-container">
+                    <select id="sort-select" onchange="applyFilters()">
+                        <option value="newest">📅 Сначала новые</option>
+                        <option value="price-asc">💸 Сначала дешевые</option>
+                        <option value="price-desc">💎 Сначала дорогие</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <section id="marketplace">
+            <div id="dolls-container" class="doll-grid">
+                <div class="loading">
+                    <i class="fas fa-spinner fa-spin"></i> Загрузка каталога...
+                </div>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Сделано с любовью и вниманием к деталям.</p>
+        <p>&copy; 2025 Created with Love ❤️</p>
     </footer>
-    
+
     <script>
-        // Весь JavaScript-код остался здесь, чтобы не плодить файлы
         const JSON_URL = '/static/dolls_data.json';
-        let allDollsData = []; 
-        
-        // === ОСНОВНАЯ ФУНКЦИЯ ЗАГРУЗКИ ДАННЫХ ===
+        let allDollsData = [];
+        let currentCategory = 'all';
+
+        // === ЗАГРУЗКА ===
         async function loadDolls() {
             try {
                 const response = await fetch(JSON_URL);
-                
-                if (!response.ok) {
-                    throw new Error(`Ошибка загрузки: ${response.status} ${response.statusText}`);
-                }
-                
+                if (!response.ok) throw new Error("Ошибка сети");
                 allDollsData = await response.json();
-                
-                // Сортировка
-                allDollsData.sort((a, b) => {
-                    if (a.is_preorder && !b.is_preorder) return -1;
-                    if (!a.is_preorder && b.is_preorder) return 1;
-                    return b.id - a.id; 
-                });
-
-                renderDolls(allDollsData); 
-
+                applyFilters(); // Применяем фильтры сразу после загрузки
             } catch (error) {
-                console.error("Не удалось загрузить данные кукол:", error);
+                console.error(error);
                 document.getElementById('dolls-container').innerHTML = 
-                    '<p class="error-message">😔 Не удалось загрузить каталог. Пожалуйста, попробуй позже!</p>';
+                    '<p class="error-message">😔 Не удалось загрузить данные.</p>';
             }
         }
 
-        // === ФУНКЦИЯ ОТОБРАЖЕНИЯ КАРТОЧЕК ===
-        function renderDolls(dollsArray) {
-            const container = document.getElementById('dolls-container');
-            container.innerHTML = ''; 
+        // === УПРАВЛЕНИЕ КАТЕГОРИЯМИ ===
+        function setCategory(category) {
+            currentCategory = category;
+            
+            // Обновляем кнопки
+            document.querySelectorAll('.filter-buttons button').forEach(btn => btn.classList.remove('active'));
+            document.getElementById(`filter-${category}`).classList.add('active');
+            
+            applyFilters();
+        }
 
-            if (dollsArray.length === 0) {
-                container.innerHTML = '<p>💖 В этой категории пока ничего нет. Загляни позже!</p>';
+        // === ГЛАВНАЯ ФУНКЦИЯ ФИЛЬТРАЦИИ И СОРТИРОВКИ ===
+        function applyFilters() {
+            const searchQuery = document.getElementById('search-input').value.toLowerCase();
+            const sortValue = document.getElementById('sort-select').value;
+
+            let filtered = allDollsData.filter(doll => {
+                // 1. Фильтр по категории
+                if (currentCategory === 'stock' && doll.is_preorder) return false;
+                if (currentCategory === 'preorder' && !doll.is_preorder) return false;
+
+                // 2. Поиск по тексту
+                if (searchQuery) {
+                    const text = (doll.text || "").toLowerCase();
+                    return text.includes(searchQuery);
+                }
+                return true;
+            });
+
+            // 3. Сортировка
+            filtered.sort((a, b) => {
+                if (sortValue === 'newest') {
+                    // Приоритет предзаказам, потом по ID
+                    if (a.is_preorder !== b.is_preorder) return a.is_preorder ? -1 : 1;
+                    return b.id - a.id;
+                } 
+                else if (sortValue === 'price-asc') {
+                    return (parseFloat(a.price) || 999999) - (parseFloat(b.price) || 999999);
+                } 
+                else if (sortValue === 'price-desc') {
+                    return (parseFloat(b.price) || 0) - (parseFloat(a.price) || 0);
+                }
+            });
+
+            renderDolls(filtered);
+        }
+
+        // === ОТРИСОВКА ===
+        function renderDolls(data) {
+            const container = document.getElementById('dolls-container');
+            container.innerHTML = '';
+
+            if (data.length === 0) {
+                container.innerHTML = '<div class="empty-state">Nothing found 🥺</div>';
                 return;
             }
 
-            dollsArray.forEach(doll => {
-                const card = document.createElement('div');
-                card.classList.add('doll-card');
-                
+            data.forEach(doll => {
                 const isPreorder = doll.is_preorder;
-                const statusText = isPreorder ? '🔥 Предзаказ' : '✨ В наличии';
+                const statusText = isPreorder ? 'Предзаказ' : 'В наличии';
+                const statusClass = isPreorder ? 'status-preorder' : 'status-stock';
                 
-                // Очищаем текст от хештегов
-                const cleanedText = doll.text
-                    .replace(/#\w+/g, '') 
-                    .replace(/\n\s*\n/g, '\n') 
-                    .trim();
+                // Обработка текста
+                let cleanText = doll.text.replace(/#\w+/g, '').replace(/\n\s*\n/g, '\n').trim();
+                let title = cleanText.split('\n')[0].substring(0, 50);
+                let desc = cleanText.split('\n').slice(1).join(' ').substring(0, 100) + '...';
 
-                const title = cleanedText.split('\n')[0].trim() || "Кукла без названия";
-                
-                // Описание: берем весь текст после первой строки
-                let description = cleanedText.split('\n').slice(1).join('\n').trim();
-                if (description.length === 0) {
-                    description = cleanedText.trim();
-                }
-                description = description.length > 150 ? description.substring(0, 150).trim() + '...' : description;
-
-
-                // === БЛОК ЦЕНЫ ===
+                // Цены
                 let priceHtml = '';
                 if (doll.price) {
-                    let deliveryTag = '';
-                    if (doll.delivery_price) {
-                        deliveryTag = `<span class="delivery-price">+ ${doll.delivery_price} дс</span>`;
-                    }
-                    
-                    priceHtml = `
-                        <div class="price-tag">
-                            <span class="main-price">${doll.price}</span>
-                            ${deliveryTag}
-                        </div>
-                    `;
+                    let delHtml = doll.delivery_price ? `<span class="delivery">+${doll.delivery_price} дс</span>` : '';
+                    priceHtml = `<div class="price-row"><span class="price">${doll.price} ₴</span>${delHtml}</div>`;
                 }
-                // ===============================
 
+                // Индикатор нескольких фото
+                let multiPhotoHtml = '';
+                if (doll.photo_count > 1) {
+                    multiPhotoHtml = `<div class="badge-photo"><i class="fas fa-images"></i> ${doll.photo_count}</div>`;
+                }
+
+                // Индикатор комментариев
+                let commentHtml = '';
+                if (doll.comment_count > 0) {
+                    commentHtml = `<span class="meta-comment"><i class="far fa-comment"></i> ${doll.comment_count}</span>`;
+                }
+
+                const card = document.createElement('div');
+                card.className = 'card';
                 card.innerHTML = `
-                    <div class="doll-status ${isPreorder ? 'preorder' : 'stock'}">${statusText}</div>
-                    <img src="${doll.photo_path || '/placeholder.jpg'}" alt="${title}">
-                    <div class="card-body">
-                        <h3>${title}</h3>
-                        ${priceHtml} 
-                        <p class="description">${description}</p>
+                    <div class="card-image-wrapper" onclick="openLightbox('${doll.photo_path}')">
+                        <span class="status-badge ${statusClass}">${statusText}</span>
+                        ${multiPhotoHtml}
+                        <img src="${doll.photo_path || '/placeholder.jpg'}" alt="${title}" loading="lazy">
+                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
                     </div>
-                    <div class="card-actions">
-                        <a href="${doll.link}" target="_blank" class="buy-button">
-                            <i class="fas fa-shopping-cart"></i> ${isPreorder ? 'Обсудить предзаказ' : 'Купить'}
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3>${title}</h3>
+                            ${commentHtml}
+                        </div>
+                        ${priceHtml}
+                        <p class="desc">${desc}</p>
+                        <a href="${doll.link}" target="_blank" class="btn-buy">
+                            <i class="fab fa-telegram-plane"></i> 
+                            ${isPreorder ? 'Записаться' : 'Купить'}
                         </a>
                     </div>
                 `;
@@ -138,31 +189,23 @@
             });
         }
 
-        // === ФУНКЦИЯ ФИЛЬТРАЦИИ ===
-        function filterDolls(filterType) {
-            let filteredData = [];
-
-            // Сброс активного класса на кнопках
-            document.querySelectorAll('.filter-controls button').forEach(btn => {
-                btn.classList.remove('active');
-            });
-            document.getElementById(`filter-${filterType}`).classList.add('active');
-
-
-            if (filterType === 'all') {
-                filteredData = allDollsData;
-            } else if (filterType === 'stock') {
-                filteredData = allDollsData.filter(doll => !doll.is_preorder);
-            } else if (filterType === 'preorder') {
-                filteredData = allDollsData.filter(doll => doll.is_preorder);
-            }
-            
-            renderDolls(filteredData);
+        // === ЛАЙТБОКС (ПРОСМОТР ФОТО) ===
+        function openLightbox(src) {
+            if(!src) return;
+            const lightbox = document.getElementById('lightbox');
+            const img = document.getElementById('lightbox-img');
+            img.src = src;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Блокируем скролл сайта
         }
 
-        // Запускаем загрузку данных при открытии страницы
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
         loadDolls();
     </script>
 </body>
-
 </html>

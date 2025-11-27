@@ -9,11 +9,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
-
     <div class="easter-egg-container">
-        <i class="fas fa-star floating-icon" style="top:10%; left:5%"></i>
-        <i class="fas fa-heart floating-icon" style="top:20%; right:10%"></i>
-        <i class="fas fa-crown floating-icon" style="top:50%; left:15%"></i>
+        <i class="fas fa-skull floating-icon" style="top:10%; left:5%"></i>
+        <i class="fas fa-heart-broken floating-icon" style="top:20%; right:10%"></i>
+        <i class="fas fa-bolt floating-icon" style="top:50%; left:15%"></i>
     </div>
 
     <div id="lightbox" class="lightbox" onclick="closeLightbox()">
@@ -123,23 +122,17 @@
             data.forEach(doll => {
                 const isPreorder = doll.is_preorder;
                 
-                // --- ЛОГИКА ОБРАБОТКИ ТЕКСТА И "СТАНА" ---
+                // Текст и Стан
                 let rawText = doll.text;
                 let conditionText = null;
-
-                // Регулярка ищет строку начинающуюся с "стан:" (флаг i - регистронезависимо, m - многострочно)
                 const conditionMatch = rawText.match(/^(стан[:\s].*)$/im);
-                
                 if (conditionMatch) {
-                    conditionText = conditionMatch[1].replace(/стан[:\s]*/i, '').trim(); // Убираем само слово "стан:"
-                    // Если хочешь убрать строку из описания, раскомментируй строку ниже:
-                    // rawText = rawText.replace(conditionMatch[0], ''); 
+                    conditionText = conditionMatch[1].replace(/стан[:\s]*/i, '').trim();
                 }
 
-                // Чистим текст от тегов #
                 let cleanText = rawText.replace(/#\w+/g, '').trim();
-                let title = cleanText.split('\n')[0]; // Первая строка - заголовок
-                let description = cleanText.substring(title.length).trim(); // Остальное - описание
+                let title = cleanText.split('\n')[0];
+                let description = cleanText.substring(title.length).trim();
 
                 // Цены
                 let priceHtml = '';
@@ -148,11 +141,24 @@
                     priceHtml = `<div class="price-block"><span class="main-price">${doll.price} ₴</span>${delHtml}</div>`;
                 }
 
-                // Стан (Condition) Badge
+                // Стан
                 let conditionHtml = '';
                 if (conditionText) {
                     conditionHtml = `<div class="condition-badge"><i class="fas fa-sparkles"></i> Стан: ${conditionText}</div>`;
                 }
+
+                // --- НОВАЯ СЕКЦИЯ: МЕТА ДАННЫЕ (ФОТО И КОММЕНТЫ) ---
+                let metaHtml = '<div class="card-meta">';
+                // Комментарии
+                if (doll.comment_count !== undefined) {
+                    metaHtml += `<span title="Комментарии в канале"><i class="far fa-comment-dots"></i> ${doll.comment_count}</span>`;
+                }
+                // Фото (если больше 1)
+                if (doll.photo_count && doll.photo_count > 1) {
+                    metaHtml += `<span title="Фотографий в альбоме"><i class="far fa-images"></i> ${doll.photo_count}</span>`;
+                }
+                metaHtml += '</div>';
+                // ----------------------------------------------------
 
                 const card = document.createElement('div');
                 card.className = `card ${isPreorder ? 'type-preorder' : 'type-stock'}`;
@@ -160,12 +166,14 @@
                 card.innerHTML = `
                     <div class="card-img-box" onclick="openLightbox('${doll.photo_path}')">
                         <span class="status-label">${isPreorder ? 'Предзаказ' : 'В наличии'}</span>
-                        ${doll.photo_count > 1 ? `<span class="multi-icon"><i class="fas fa-images"></i> ${doll.photo_count}</span>` : ''}
                         <img src="${doll.photo_path || '/placeholder.jpg'}" loading="lazy" alt="Doll">
                         <div class="hover-overlay"><i class="fas fa-eye"></i></div>
                     </div>
                     <div class="card-body">
-                        <h3 class="card-title">${title}</h3>
+                        <div class="card-header-row">
+                             <h3 class="card-title">${title}</h3>
+                        </div>
+                        ${metaHtml}
                         ${conditionHtml}
                         ${priceHtml}
                         <div class="card-text">
@@ -180,7 +188,6 @@
             });
         }
 
-        // Лайтбокс
         function openLightbox(src) {
             if(!src) return;
             const lb = document.getElementById('lightbox');
@@ -193,17 +200,15 @@
             document.body.style.overflow = 'auto';
         }
 
-        // Пасхалка: Клик по заголовку
         function triggerEasterEgg() {
             document.body.classList.toggle('magic-mode');
-            const icons = document.querySelectorAll('.floating-icon');
-            icons.forEach(icon => {
-                icon.style.display = 'block';
-                icon.style.animation = 'floatUp 3s ease-out forwards';
-            });
-            setTimeout(() => {
-                icons.forEach(icon => icon.style.display = 'none');
-            }, 3000);
+            // Сохраняем выбор темы
+            localStorage.setItem('theme', document.body.classList.contains('magic-mode') ? 'magic' : 'light');
+        }
+        
+        // Проверяем сохраненную тему
+        if(localStorage.getItem('theme') === 'magic') {
+            document.body.classList.add('magic-mode');
         }
 
         loadDolls();

@@ -83,7 +83,7 @@ async def parse_channel():
     processed_media_groups = set()
 
     try:
-        async for message in app.get_chat_history(CHANNEL_USERNAME, limit=150): 
+        async for message in app.get_chat_history(CHANNEL_USERNAME, limit=500): 
             # Пропускаем, если это часть альбома, который мы уже обработали (чтобы не было дублей товаров)
             if message.media_group_id and message.media_group_id in processed_media_groups:
                 continue
@@ -170,3 +170,4 @@ async def parse_channel():
 
 if __name__ == "__main__":
     asyncio.run(parse_channel())
+

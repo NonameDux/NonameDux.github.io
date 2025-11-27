@@ -6,8 +6,8 @@ from pyrogram import Client
 from pyrogram.enums import MessageMediaType
 
 # --- КОНФИГУРАЦИЯ ---
-API_ID = 32614477 
-API_HASH = "ea52bfb513bf2a15a9e65b6321ecdcd3"
+API_ID = int(os.environ.get("TELEGRAM_API_ID", 0)) 
+API_HASH = os.environ.get("TELEGRAM_API_HASH", "")
 CHANNEL_USERNAME = "@kabi_mlp"
 OUTPUT_JSON_FILE = "static/dolls_data.json" 
 MEDIA_DIR = "static/doll_images" 
@@ -161,3 +161,4 @@ async def parse_channel():
 
 if __name__ == "__main__":
     asyncio.run(parse_channel())
+

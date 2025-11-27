@@ -1,217 +1,66 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>✨ Doll Magic Shop | Kabi MLP</title>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="dolls.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="login.css">
+    <title>Wow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="easter-egg-container">
-        <i class="fas fa-skull floating-icon" style="top:10%; left:5%"></i>
-        <i class="fas fa-heart-broken floating-icon" style="top:20%; right:10%"></i>
-        <i class="fas fa-bolt floating-icon" style="top:50%; left:15%"></i>
-    </div>
-
-    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-        <span class="close-btn">&times;</span>
-        <img class="lightbox-content" id="lightbox-img">
-    </div>
-
-    <header>
-        <div class="header-inner">
-            <h1 onclick="triggerEasterEgg()">🔮 Волшебная Лавка</h1>
-            <p>Monster High • Ever After High • MLP</p>
+        <div id="login">
+            <p align="center">Ну-ка, Принцесса,<BR> вспоминай секретный код!</p>
+            <input type="text" id="input-field" placeholder="Вводить сюда">
+            <button id="check-button">Вперёд</button>
+            <p id="message"></p>
         </div>
-    </header>
-
-    <main>
-        <section class="controls-section">
-            <div class="search-box">
-                <i class="fas fa-magic"></i>
-                <input type="text" id="search-input" placeholder="Найти куклу мечты..." oninput="applyFilters()">
-            </div>
-
-            <div class="filters">
-                <button id="filter-all" class="active" onclick="setCategory('all')">Все чудеса</button>
-                <button id="filter-stock" onclick="setCategory('stock')">В наличии</button>
-                <button id="filter-preorder" onclick="setCategory('preorder')">Предзаказ</button>
-                
-                <div class="custom-select">
-                    <select id="sort-select" onchange="applyFilters()">
-                        <option value="newest">📅 Новинки</option>
-                        <option value="price-asc">🌸 Сначала доступные</option>
-                        <option value="price-desc">👑 Сначала эксклюзив</option>
-                    </select>
-                </div>
-            </div>
-        </section>
-
-        <section id="marketplace">
-            <div id="dolls-container" class="doll-grid">
-                <div class="loading">
-                    <i class="fas fa-spinner fa-spin"></i> Собираем магию...
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>Created with 💖 for my love</p>
-    </footer>
-
     <script>
-        const JSON_URL = '/static/dolls_data.json';
-        let allDollsData = [];
-        let currentCategory = 'all';
+        // Ссылки на элементы DOM
+        const inputField = document.getElementById('input-field');
+        const checkButton = document.getElementById('check-button');
+        const messageElement = document.getElementById('message');
 
-        async function loadDolls() {
-            try {
-                const response = await fetch(JSON_URL);
-                if (!response.ok) throw new Error("Ошибка сети");
-                allDollsData = await response.json();
-                applyFilters();
-            } catch (error) {
-                console.error(error);
-                document.getElementById('dolls-container').innerHTML = 
-                    '<p class="error-message">😔 Магия рассеялась... Не удалось загрузить данные.</p>';
-            }
-        }
-
-        function setCategory(category) {
-            currentCategory = category;
-            document.querySelectorAll('.filters button').forEach(btn => btn.classList.remove('active'));
-            document.getElementById(`filter-${category}`).classList.add('active');
-            applyFilters();
-        }
-
-        function applyFilters() {
-            const searchQuery = document.getElementById('search-input').value.toLowerCase();
-            const sortValue = document.getElementById('sort-select').value;
-
-            let filtered = allDollsData.filter(doll => {
-                if (currentCategory === 'stock' && doll.is_preorder) return false;
-                if (currentCategory === 'preorder' && !doll.is_preorder) return false;
-                if (searchQuery) {
-                    const text = (doll.text || "").toLowerCase();
-                    return text.includes(searchQuery);
-                }
-                return true;
-            });
-
-            filtered.sort((a, b) => {
-                if (sortValue === 'newest') return b.id - a.id;
-                else if (sortValue === 'price-asc') return (parseFloat(a.price) || 999999) - (parseFloat(b.price) || 999999);
-                else if (sortValue === 'price-desc') return (parseFloat(b.price) || 0) - (parseFloat(a.price) || 0);
-            });
-
-            renderDolls(filtered);
-        }
-
-        function renderDolls(data) {
-            const container = document.getElementById('dolls-container');
-            container.innerHTML = '';
-
-            if (data.length === 0) {
-                container.innerHTML = '<div class="empty-state">Ничего не найдено 🕸️</div>';
-                return;
-            }
-
-            data.forEach(doll => {
-                const isPreorder = doll.is_preorder;
-                
-                // Текст и Стан
-                let rawText = doll.text;
-                let conditionText = null;
-                const conditionMatch = rawText.match(/^(стан[:\s].*)$/im);
-                if (conditionMatch) {
-                    conditionText = conditionMatch[1].replace(/стан[:\s]*/i, '').trim();
-                }
-
-                let cleanText = rawText.replace(/#\w+/g, '').trim();
-                let title = cleanText.split('\n')[0];
-                let description = cleanText.substring(title.length).trim();
-
-                // Цены
-                let priceHtml = '';
-                if (doll.price) {
-                    let delHtml = doll.delivery_price ? `<span class="delivery">+${doll.delivery_price} дс</span>` : '';
-                    priceHtml = `<div class="price-block"><span class="main-price">${doll.price} ₴</span>${delHtml}</div>`;
-                }
-
-                // Стан
-                let conditionHtml = '';
-                if (conditionText) {
-                    conditionHtml = `<div class="condition-badge"><i class="fas fa-sparkles"></i> Стан: ${conditionText}</div>`;
-                }
-
-                // --- НОВАЯ СЕКЦИЯ: МЕТА ДАННЫЕ (ФОТО И КОММЕНТЫ) ---
-                let metaHtml = '<div class="card-meta">';
-                // Комментарии
-                if (doll.comment_count !== undefined) {
-                    metaHtml += `<span title="Комментарии в канале"><i class="far fa-comment-dots"></i> ${doll.comment_count}</span>`;
-                }
-                // Фото (если больше 1)
-                if (doll.photo_count && doll.photo_count > 1) {
-                    metaHtml += `<span title="Фотографий в альбоме"><i class="far fa-images"></i> ${doll.photo_count}</span>`;
-                }
-                metaHtml += '</div>';
-                // ----------------------------------------------------
-
-                const card = document.createElement('div');
-                card.className = `card ${isPreorder ? 'type-preorder' : 'type-stock'}`;
-                
-                card.innerHTML = `
-                    <div class="card-img-box" onclick="openLightbox('${doll.photo_path}')">
-                        <span class="status-label">${isPreorder ? 'Предзаказ' : 'В наличии'}</span>
-                        <img src="${doll.photo_path || '/placeholder.jpg'}" loading="lazy" alt="Doll">
-                        <div class="hover-overlay"><i class="fas fa-eye"></i></div>
-                    </div>
-                    <div class="card-body">
-                        <div class="card-header-row">
-                             <h3 class="card-title">${title}</h3>
-                        </div>
-                        ${metaHtml}
-                        ${conditionHtml}
-                        ${priceHtml}
-                        <div class="card-text">
-                            ${description}
-                        </div>
-                        <a href="${doll.link}" target="_blank" class="buy-btn">
-                            Хочу купить! <i class="fas fa-heart"></i>
-                        </a>
-                    </div>
-                `;
-                container.appendChild(card);
-            });
-        }
-
-        function openLightbox(src) {
-            if(!src) return;
-            const lb = document.getElementById('lightbox');
-            document.getElementById('lightbox-img').src = src;
-            lb.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-        function closeLightbox() {
-            document.getElementById('lightbox').classList.remove('active');
-            document.body.style.overflow = 'auto';
-        }
-
-        function triggerEasterEgg() {
-            document.body.classList.toggle('magic-mode');
-            // Сохраняем выбор темы
-            localStorage.setItem('theme', document.body.classList.contains('magic-mode') ? 'magic' : 'light');
-        }
+        // Секретное слово и целевая страница
+        const SECRET_WORD = "Дайсон";
+        const TARGET_URL = "secret.html";
         
-        // Проверяем сохраненную тему
-        if(localStorage.getItem('theme') === 'magic') {
-            document.body.classList.add('magic-mode');
+        /**
+         * Проверяет введенный текст и выполняет перенаправление.
+         */
+        function checkSecretCode() {
+            // 1. Получаем значение из поля ввода и очищаем его от пробелов в начале/конце
+            const enteredText = inputField.value.trim();
+            
+            // 2. Выполняем проверку
+            if (enteredText === SECRET_WORD) {
+                // Успех! Обновляем сообщение и перенаправляем.
+                messageElement.textContent = "Код верный! Перенаправление...";
+                messageElement.style.color = "#28a745"; // Зеленый цвет
+                
+                // Перенаправление на secret.html
+                window.location.href = TARGET_URL; 
+                
+            } else {
+                // Ошибка. Показываем сообщение.
+                messageElement.textContent = "Неверный код. Попробуйте еще раз.";
+                messageElement.style.color = "#dc3545"; // Красный цвет
+                inputField.value = ""; // Очищаем поле
+            }
         }
 
-        loadDolls();
+        // 3. Назначаем обработчик события клика
+        checkButton.addEventListener('click', checkSecretCode);
+        
+        // Опционально: Проверка по нажатию Enter в поле ввода
+        inputField.addEventListener('keypress', function(event) {
+            // Код клавиши Enter - 13
+            if (event.key === 'Enter') {
+                checkSecretCode();
+            }
+        });
+
     </script>
 </body>
 </html>

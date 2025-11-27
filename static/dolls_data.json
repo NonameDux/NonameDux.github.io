@@ -106,5 +106,401 @@
         "link": "https://t.me/kabi_mlp/2041",
         "price": "80",
         "delivery_price": null
+    },
+    {
+        "id": 2039,
+        "text": "🫧 Прозора бб🫧\n\nСтан: дф на вушку\n\nЦіна: 70\n\n#наявність",
+        "photo_path": "static/doll_images/2039_photo.jpg",
+        "is_preorder": false,
+        "link": "https://t.me/kabi_mlp/2039",
+        "price": "70",
+        "delivery_price": null
+    },
+    {
+        "id": 2038,
+        "text": "🎉Пінкі мак🎉\n\nСтан: ідеальна\n\nЦіна: 40\n\n#наявність",
+        "photo_path": "static/doll_images/2038_photo.jpg",
+        "is_preorder": false,
+        "link": "https://t.me/kabi_mlp/2038",
+        "price": "40",
+        "delivery_price": null
+    },
+    {
+        "id": 2036,
+        "text": "💎Раріті на ооак💎\n\nСтан: всьо плохо, не покусана, дф на розі\n\nЦіна: 40\n\n#наявність",
+        "photo_path": "static/doll_images/2036_photo.jpg",
+        "is_preorder": false,
+        "link": "https://t.me/kabi_mlp/2036",
+        "price": "40",
+        "delivery_price": null
+    },
+    {
+        "id": 2035,
+        "text": "🌈Рейнбоу пластик🌈\n\nСтан: на ооак, повністю відсутні помаранчеві пасма, пухнастий хвіст\nЗ тілом все супер\n\nЦіна: 80\n\n#наявність",
+        "photo_path": "static/doll_images/2035_photo.jpg",
+        "is_preorder": false,
+        "link": "https://t.me/kabi_mlp/2035",
+        "price": "80",
+        "delivery_price": null
+    },
+    {
+        "id": 2031,
+        "text": "🫧Карета Раріті🫧\n\nСтан: можливі не значні потертості\n\nЦіна: 100\n\n#наявність",
+        "photo_path": "static/doll_images/2031_photo.jpg",
+        "is_preorder": false,
+        "link": "https://t.me/kabi_mlp/2031",
+        "price": "100",
+        "delivery_price": null
+    },
+    {
+        "id": 2011,
+        "text": "🫧 Кризаліс інтерактивна 🫧\nпрацює\n\nЦіна: 1380 + 100 дс\n\n#передзамовлення",
+        "photo_path": "static/doll_images/2011_photo.jpg",
+        "is_preorder": true,
+        "link": "https://t.me/kabi_mlp/2011",
+        "price": "1380",
+        "delivery_price": "100"
+    },
+    {
+        "id": 2003,
+        "text": "🫧 Лот 🫧\n\nРейнбоу Флеш, Деш чолкаста, г3\n\nЦіна: 1760 + 200 дс\n\n#передзамовлення",
+        "photo_path": "static/doll_images/2003_photo.jpg",
+        "is_preorder": true,
+        "link": "https://t.me/kabi_mlp/2003",
+        "price": "1760",
+        "delivery_price": "200"
+    },
+    {
+        "id": 1988,
+        "text": "Внєзапний нічний прикол\n\n🫧Луна🫧\nприведу до ладу\n\nЦіна: 990 + 100 дс\n\n#передзамовлення",
+        "photo_path": "static/doll_images/1988_photo.jpg",
+        "is_preorder": true,
+        "link": "https://t.me/kabi_mlp/1988",
+        "price": "990",
+        "delivery_price": "100"
+    },
+    {
+        "id": 1985,
+        "text": "🫧 Лот 🫧\n\nЛуна водяна, Селестія, Каденс пластик, Шайнінг, Твайлайт пластик, Каденс світяшка\n\nЦіна: 1610 + 100 дс\n\n#передзамовлення",
+        "photo_path": "static/doll_images/1985_photo.jpg",
+        "is_preorder": true,
+        "link": "https://t.me/kabi_mlp/1985",
+        "price": "1610",
+        "delivery_price": "100"
+    },
+    {
+        "id": 1981,
+        "text": "🫧 Лот 🫧\n\nкінотеатр егм, Селестія, Твай велика з аксами, Флат розмальовка\n\nЦіна: 990 + 200 дс\n\n#передзамовлення",
+        "photo_path": "static/doll_images/1981_photo.jpg",
+        "is_preorder": true,
+        "link": "https://t.me/kabi_mlp/1981",
+        "price": "990",
+        "delivery_price": "200"
+    },
+    {
+        "id": 1980,
+        "text": "🫧 Сансет нрфб 🫧\n\nЦіна: 775 + 100 дс\n\n#передзамовлення",
+        "photo_path": "static/doll_images/1980_photo.jpg",
+        "is_preorder": true,
+        "link": "https://t.me/kabi_mlp/1980",
+        "price": "775",
+        "delivery_price": "100"
+    },
+    {
+        "id": 1976,
+        "text": "🫧 Холі Деш 🫧\n\nЦіна: 3680 + 100 дс\n\n#передзамовлення \n\nЯ знаю, що в Україні можна взяти дешевше, але на даний момент це найдешевший варіант в Європі\nСкоріше для тих, хто хоче холі тут і зарад",
+        "photo_path": "static/doll_images/1976_photo.jpg",
+        "is_preorder": true,
+        "link": "https://t.me/kabi_mlp/1976",
+        "price": "3680",
+        "delivery_price": "100"
+    },
+    {
+        "id": 1965,
+        "text": "🫧 Лот 🫧\n\nСкай Вішез кмм, Твай база, Хані з крилами, водяні\n\nЦіна: 2050 + 150 дс\n\n#передзамовлення",
+        "photo_path": "static/doll_images/1965_photo.jpg",
+        "is_preorder": true,
+        "link": "https://t.me/kabi_mlp/1965",
+        "price": "2050",
+        "delivery_price": "150"
+    },
+    {
+        "id": 1959,
+        "text": "🫧Лот🫧\n\nТріксі кмм, Стар Дрімс, Блос водяна, Світі Бель \n\nЦіна: 2460 + 260 дс\n\n#передзамовлення",
+        "photo_path": "static/doll_images/1959_photo.jpg",
+        "is_preorder": true,
+        "link": "https://t.me/kabi_mlp/1959",
+        "price": "2460",
+        "delivery_price": "260"
+    },
+    {
+        "id": 1956,
+        "text": "🫧 Лот 🫧\n\nЧері бері перламутр, Епл водяна, Твай з потягом, Пінкі з лебедем, г1, г3 \n\nЦіна: 1950 + 200 дс\n\n#передзамовлення",
+        "photo_path": "static/doll_images/1956_photo.jpg",
+        "is_preorder": true,
+        "link": "https://t.me/kabi_mlp/1956",
+        "price": "1950",
+        "delivery_price": "200"
+    },
+    {
+        "id": 1943,
+        "text": "💎Раріті з каретою💎\n\nСтан: раріті чуть брудненька, на кареті не значні потертості, міні дф на оці\n\nЦіна: 430\n\n#наявність",
+        "photo_path": "static/doll_images/1943_photo.jpg",
+        "is_preorder": false,
+        "link": "https://t.me/kabi_mlp/1943",
+        "price": "430",
+        "delivery_price": null
+    },
+    {
+        "id": 1937,
+        "text": "💎Раріті резина💎\n\nСтан: плямка на вусі, дф на копиті\n\nЦіна: 130\n\n#наявність",
+        "photo_path": "static/doll_images/1937_photo.jpg",
+        "is_preorder": false,
+        "link": "https://t.me/kabi_mlp/1937",
+        "price": "130",
+        "delivery_price": null
+    },
+    {
+        "id": 1936,
+        "text": "✨Твайлайт рп✨\n\nСтан: міні плямка, одне крило\n\nЦіна: 100\n\n#наявність",
+        "photo_path": "static/doll_images/1936_photo.jpg",
+        "is_preorder": false,
+        "link": "https://t.me/kabi_mlp/1936",
+        "price": "100",
+        "delivery_price": null
+    },
+    {
+        "id": 1935,
+        "text": "✨Твайлайт✨\n\nСтан: немає крил, підтерта кьюті\n\nЦіна: 100\n\n#наявність",
+        "photo_path": "static/doll_images/1935_photo.jpg",
+        "is_preorder": false,
+        "link": "https://t.me/kabi_mlp/1935",
+        "price": "100",
+        "delivery_price": null
+    },
+    {
+        "id": 1934,
+        "text": "🌈Рейнбоу сікрет сцена🌈\n\nСтан: стрижена, гривка жорстка\n\nЦіна: 60\n\n#наявність",
+        "photo_path": "static/doll_images/1934_photo.jpg",
+        "is_preorder": false,
+        "link": "https://t.me/kabi_mlp/1934",
+        "price": "60",
+        "delivery_price": null
+    },
+    {
+        "id": 1931,
+        "text": "🍎Епл Джек ребут🍎\n\nСтан: ідеальна\n\nЦіна: 110\n\n#наявність",
+        "photo_path": "static/doll_images/1931_photo.jpg",
+        "is_preorder": false,
+        "link": "https://t.me/kabi_mlp/1931",
+        "price": "110",
+        "delivery_price": null
+    },
+    {
+        "id": 1930,
+        "text": "🌈Рейнбоу ребут🌈\n\nСтан: стрижена, жорсткі кінчики\n\nЦіна: 90\n\n#наявність",
+        "photo_path": "static/doll_images/1930_photo.jpg",
+        "is_preorder": false,
+        "link": "https://t.me/kabi_mlp/1930",
+        "price": "90",
+        "delivery_price": null
+    },
+    {
+        "id": 1929,
+        "text": "✨Твайлайт✨\n\nСтан: стрижена грива, працює, міні плямки\n\nЦіна: 70\n\n#наявність",
+        "photo_path": "static/doll_images/1929_photo.jpg",
+        "is_preorder": false,
+        "link": "https://t.me/kabi_mlp/1929",
+        "price": "70",
+        "delivery_price": null
+    },
+    {
+        "id": 1928,
+        "text": "🫧 Пасхальна г3🫧\n\nСтан: помальована, можливо стрижена\n\nЦіна: 100\n\n#наявність",
+        "photo_path": "static/doll_images/1928_photo.jpg",
+        "is_preorder": false,
+        "link": "https://t.me/kabi_mlp/1928",
+        "price": "100",
+        "delivery_price": null
+    },
+    {
+        "id": 1926,
+        "text": "🎉Пінкі спальна🎉\n\nСтан: міні дф біля ока, майже всі акси\n\nЦіна: 200\n\n#наявність",
+        "photo_path": "static/doll_images/1926_photo.jpg",
+        "is_preorder": false,
+        "link": "https://t.me/kabi_mlp/1926",
+        "price": "200",
+        "delivery_price": null
+    },
+    {
+        "id": 1923,
+        "text": "🫧Рапунцель г3.5🫧\n\nСтан: покусана, волосся трохи жорстке\n\nЦіна: 50\n\n#наявність",
+        "photo_path": "static/doll_images/1923_photo.jpg",
+        "is_preorder": false,
+        "link": "https://t.me/kabi_mlp/1923",
+        "price": "50",
+        "delivery_price": null
+    },
+    {
+        "id": 1917,
+        "text": "🎉Пінкі клоун🎉\n\nСтан: чуть чуть брудненька\n\nЦіна: 120\n\n#наявність",
+        "photo_path": "static/doll_images/1917_photo.jpg",
+        "is_preorder": false,
+        "link": "https://t.me/kabi_mlp/1917",
+        "price": "120",
+        "delivery_price": null
+    },
+    {
+        "id": 1905,
+        "text": "🫧 Лот 🫧\n\nПлумет крилатка, г4, г3.5, г3\n\nЦіна: 1110 + 100 дс\n\n#передзамовлення",
+        "photo_path": "static/doll_images/1905_photo.jpg",
+        "is_preorder": true,
+        "link": "https://t.me/kabi_mlp/1905",
+        "price": "1110",
+        "delivery_price": "100"
+    },
+    {
+        "id": 1903,
+        "text": "🫧Лот 🫧\n\nДью Дроп, Каденс, Флурі\n\nЦіна: 980 + 140 дс\n\n#передзамовлення",
+        "photo_path": "static/doll_images/1903_photo.jpg",
+        "is_preorder": true,
+        "link": "https://t.me/kabi_mlp/1903",
+        "price": "980",
+        "delivery_price": "140"
+    },
+    {
+        "id": 1902,
+        "text": "🫧 Лот 🫧\n\nФлатт база, Селестія, Каденс\n\nЦіна: 1390 + 130 дс\n\n#передзамовлення",
+        "photo_path": "static/doll_images/1902_photo.jpg",
+        "is_preorder": true,
+        "link": "https://t.me/kabi_mlp/1902",
+        "price": "1390",
+        "delivery_price": "130"
+    },
+    {
+        "id": 1901,
+        "text": "🫧 Лот 🫧\n\n56 поні + 1 нрфб, акси\nКоко не оріг \n\nЦіна: 6830 + 460 дс\n\n#передзамовлення",
+        "photo_path": "static/doll_images/1901_photo.jpg",
+        "is_preorder": true,
+        "link": "https://t.me/kabi_mlp/1901",
+        "price": "6830",
+        "delivery_price": "460"
+    },
+    {
+        "id": 1887,
+        "text": "🫧 Лот 🫧\n\nСелестія водяна, селестія інтерактивна\n\nЦіна: 920 + 100 дс\n\n#передзамовлення",
+        "photo_path": "static/doll_images/1887_photo.jpg",
+        "is_preorder": true,
+        "link": "https://t.me/kabi_mlp/1887",
+        "price": "920",
+        "delivery_price": "100"
+    },
+    {
+        "id": 1879,
+        "text": "🫧Лот 🫧\n\nСансет, Флавер Вішес кмм, Епл Джек кмм, Селестія від ляльки, Пінкі кмм\n\nЦіна: 1260 + 200 дс\n\n#передзамовлення",
+        "photo_path": "static/doll_images/1879_photo.jpg",
+        "is_preorder": true,
+        "link": "https://t.me/kabi_mlp/1879",
+        "price": "1260",
+        "delivery_price": "200"
+    },
+    {
+        "id": 1876,
+        "text": "🫧 Лот 🫧\n\nСтар Дрімс\n\nЦіна: 870 + 100 дс\n\n#передзамовлення",
+        "photo_path": "static/doll_images/1876_photo.jpg",
+        "is_preorder": true,
+        "link": "https://t.me/kabi_mlp/1876",
+        "price": "870",
+        "delivery_price": "100"
+    },
+    {
+        "id": 1863,
+        "text": "🫧 Лот 🫧\nДуже вигідно\n\nДью пластик, Флатті кристальна пластик, пінкі кристальна пластик\n\nЦіна: 650 + 100 дс\n\n#передзамовлення",
+        "photo_path": "static/doll_images/1863_photo.jpg",
+        "is_preorder": true,
+        "link": "https://t.me/kabi_mlp/1863",
+        "price": "650",
+        "delivery_price": "100"
+    },
+    {
+        "id": 1861,
+        "text": "🫧 Луна і Селестія фешн 🫧\n\nЦіна: 990 + 110 дс\n\n#передзамовлення",
+        "photo_path": "static/doll_images/1861_photo.jpg",
+        "is_preorder": true,
+        "link": "https://t.me/kabi_mlp/1861",
+        "price": "990",
+        "delivery_price": "110"
+    },
+    {
+        "id": 1854,
+        "text": "🫧 Ббшки 🫧\nз ліва на право\n\nСтан: можливі не значні плямки або потертості\n\nЦіна: по 80; 2 - 90\n\n#наявність",
+        "photo_path": "static/doll_images/1854_photo.jpg",
+        "is_preorder": false,
+        "link": "https://t.me/kabi_mlp/1854",
+        "price": "80",
+        "delivery_price": null
+    },
+    {
+        "id": 1853,
+        "text": "🫧 Ббшки 🫧\nз ліва на право\n\nСтан: можливі не значні плямки або потертості\n\nЦіна: по 80\n\n#наявність",
+        "photo_path": "static/doll_images/1853_photo.jpg",
+        "is_preorder": false,
+        "link": "https://t.me/kabi_mlp/1853",
+        "price": "80",
+        "delivery_price": null
+    },
+    {
+        "id": 1849,
+        "text": "🫧 Ббшки з картками 🫧\nз ліва на право\n\nСтан: можливі не значні плямки або потертості\n\nЦіна: по 80\n\n#наявність",
+        "photo_path": "static/doll_images/1849_photo.jpg",
+        "is_preorder": false,
+        "link": "https://t.me/kabi_mlp/1849",
+        "price": "80",
+        "delivery_price": null
+    },
+    {
+        "id": 1848,
+        "text": "🫧 Ббшки з картками 🫧\nз ліва на право\n\nСтан: можливі не значні плямки або потертості, картки з міні дф\n\nЦіна: по 75\n\n#наявність",
+        "photo_path": "static/doll_images/1848_photo.jpg",
+        "is_preorder": false,
+        "link": "https://t.me/kabi_mlp/1848",
+        "price": "75",
+        "delivery_price": null
+    },
+    {
+        "id": 1846,
+        "text": "🫧 Ббшки 🫧\nз ліва на право\n\nСтан: можливі не значні плямки або потертості\n\nЦіна: 1,4 по 65; 2,3 з картками по 80\n\n#наявність",
+        "photo_path": "static/doll_images/1846_photo.jpg",
+        "is_preorder": false,
+        "link": "https://t.me/kabi_mlp/1846",
+        "price": "1",
+        "delivery_price": null
+    },
+    {
+        "id": 1845,
+        "text": "🫧 Ббшки 🫧\nз ліва на право\n\nСтан: можливі не значні плямки або потертості\n\nЦіна: хані 75, інші по 65\n\n#наявність",
+        "photo_path": "static/doll_images/1845_photo.jpg",
+        "is_preorder": false,
+        "link": "https://t.me/kabi_mlp/1845",
+        "price": "75",
+        "delivery_price": null
+    },
+    {
+        "id": 1844,
+        "text": "🫧 Ббшки 🫧\nз ліва на право\n\nСтан: можливі не значні плямки або потертості\n\nЦіна: по 65\n\n#наявність",
+        "photo_path": "static/doll_images/1844_photo.jpg",
+        "is_preorder": false,
+        "link": "https://t.me/kabi_mlp/1844",
+        "price": "65",
+        "delivery_price": null
+    },
+    {
+        "id": 1843,
+        "text": "🫧 Ббшки 🫧\nз ліва на право\n\nСтан: можливі не значні плямки або потертості\n\nЦіна: по 65\n\n#наявність",
+        "photo_path": "static/doll_images/1843_photo.jpg",
+        "is_preorder": false,
+        "link": "https://t.me/kabi_mlp/1843",
+        "price": "65",
+        "delivery_price": null
     }
 ]

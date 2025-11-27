@@ -17,21 +17,19 @@ SESSION_NAME = "dolls_parser_session"
 os.makedirs("static", exist_ok=True)
 os.makedirs(MEDIA_DIR, exist_ok=True)
 
-# --- ФУНКЦИЯ ЗАДЕРЖКИ ПРИ FLOODWAIT ---
+# --- ФУНКЦИЯ ЗАДЕРЖКИ (FLOOD WAIT) ---
 async def safe_execution(coro):
-    """Выполняет корутину с ожиданием, если Telegram просит подождать"""
     while True:
         try:
             return await coro
         except FloodWait as e:
-            wait_time = e.value + 10
-            print(f"⚠️ [FLOOD WAIT] Ждем {wait_time} секунд...")
+            wait_time = e.value + 5
+            print(f"⚠️ [FLOOD] Ждем {wait_time} с...")
             await asyncio.sleep(wait_time)
-            print("🔄 Повторяем попытку...")
         except Exception as e:
             raise e
 
-# --- ФУНКЦИИ ФИЛЬТРАЦИИ И ПОИСКА ---
+# --- ВСПОМОГАТЕЛЬНЫЕ ФУНКЦИИ ---
 def filter_post(text: str) -> bool:
     if not text: return False
     text_lower = text.lower()
@@ -67,13 +65,12 @@ def find_existing_photo(message_id: int):
         return full_path
     return None
 
-# --- ГЛАВНАЯ ФУНКЦИЯ ---
+# --- ОСНОВНАЯ ФУНКЦИЯ ---
 async def parse_channel():
-    print("-> 🎀 Запуск парсера с защитой от флуда...")
+    print("-> 🚀 Запуск исправленного парсера...")
     
     app = Client(SESSION_NAME, API_ID, API_HASH)
     
-    # Безопасный старт
     try:
         await safe_execution(app.start())
     except Exception as e:
@@ -82,88 +79,84 @@ async def parse_channel():
     
     dolls_data = []
     
-    # Получаем историю (тоже безопасно)
-    # get_chat_history возвращает итератор, тут сложнее обернуть в safe_execution целиком,
-    # но FloodWait обычно вылетает при получении чанков.
-    
+    # Чтобы не обрабатывать дубликаты из одной медиа-группы
+    processed_media_groups = set()
+
     try:
         async for message in app.get_chat_history(CHANNEL_USERNAME, limit=150): 
+            # Пропускаем, если это часть альбома, который мы уже обработали (чтобы не было дублей товаров)
+            if message.media_group_id and message.media_group_id in processed_media_groups:
+                continue
+
             post_content = message.text or message.caption or ""
             
             if post_content and filter_post(post_content):
                 prices = extract_prices(post_content)
                 
-                # --- ПОДСЧЕТ КОММЕНТАРИЕВ ---
-                # Pyrogram хранит это в replies
+                # 1. СЧИТАЕМ КОММЕНТАРИИ
                 comments_count = 0
-                if message.reply_to_message:
-                     pass
                 try:
-                    # Проверяем атрибут replies (объект MessageReplies)
-                    if hasattr(message, 'replies') and message.replies:
+                    if message.replies:
                         comments_count = message.replies.replies
-                except: 
-                    comments_count = 0
+                except:
+                    pass
 
                 doll_entry = {
                     "id": message.id,
                     "text": post_content, 
                     "photo_path": None,
                     "photo_count": 1, 
-                    "comment_count": comments_count, # Сохраняем кол-во
+                    "comment_count": comments_count,
                     "is_preorder": "#передзамовлення" in post_content.lower(),
                     "link": f"https://t.me/{CHANNEL_USERNAME.lstrip('@')}/{message.id}",
                     "price": prices["price"],
                     "delivery_price": prices["delivery_price"]
                 }
                 
+                # 2. ОПРЕДЕЛЯЕМ ФОТО (ГРУППА ИЛИ ОДИНОЧНОЕ)
+                media_to_download = None
+                
+                if message.media_group_id:
+                    processed_media_groups.add(message.media_group_id)
+                    try:
+                        # Получаем все фото альбома, чтобы узнать их количество
+                        media_group = await safe_execution(app.get_media_group(message.chat.id, message.id))
+                        doll_entry["photo_count"] = len(media_group)
+                        media_to_download = media_group[0] # Берем первое фото
+                    except Exception as e:
+                        print(f"Ошибка получения альбома {message.id}: {e}")
+                        media_to_download = message
+                else:
+                    media_to_download = message
+
+                # 3. ПРОВЕРЯЕМ ФАЙЛ ИЛИ КАЧАЕМ
                 existing_photo = find_existing_photo(message.id)
                 
                 if existing_photo:
                     doll_entry["photo_path"] = existing_photo
-                    # Если фото есть, фото-каунт оставляем 1 (или можно спарсить, но это лишние запросы)
-                    # Если критично точное число фото при повторном запуске, нужно сохранять его в JSON и читать оттуда.
-                    # Сейчас для скорости оставим как есть, или попробуем media_group_id если есть.
-                else:
-                    media_to_download = None
-                    should_download = False
-                    
-                    if message.media_group_id:
-                        try:
-                            # Безопасно получаем группу
-                            media_files = await safe_execution(app.get_media_group(message.chat.id, message.id))
-                            if media_files and message.id == media_files[0].id:
-                                media_to_download = media_files[0]
-                                doll_entry["photo_count"] = len(media_files)
-                                should_download = True
-                        except Exception: pass
-                    elif message.photo or message.document:
-                        media_to_download = message
-                        should_download = True
-
-                    if should_download and media_to_download:
-                        try:
-                            ext = get_file_extension(media_to_download)
-                            file_name = os.path.join(MEDIA_DIR, f"{message.id}_photo{ext}")
-                            
-                            # БЕЗОПАСНОЕ СКАЧИВАНИЕ
-                            file_path = await safe_execution(
-                                app.download_media(media_to_download, file_name=file_name)
-                            )
-                            
-                            web_path = file_path.replace(os.sep, '/')
-                            if "static/" in web_path:
-                                doll_entry["photo_path"] = web_path[web_path.find("static/"):]
-                            else:
-                                doll_entry["photo_path"] = web_path
-                            print(f"  [Down] Фото скачано: {message.id}")
-                        except Exception as e:
-                            print(f"  ⚠️ Ошибка скачивания {message.id}: {e}")
+                    print(f"  [Skip] {message.id} (Фото есть, {doll_entry['photo_count']} шт в альбоме)")
+                elif media_to_download:
+                    try:
+                        ext = get_file_extension(media_to_download)
+                        file_name = os.path.join(MEDIA_DIR, f"{message.id}_photo{ext}")
+                        
+                        file_path = await safe_execution(
+                            app.download_media(media_to_download, file_name=file_name)
+                        )
+                        
+                        web_path = file_path.replace(os.sep, '/')
+                        if "static/" in web_path:
+                            doll_entry["photo_path"] = web_path[web_path.find("static/"):]
+                        else:
+                            doll_entry["photo_path"] = web_path
+                        print(f"  [Down] {message.id} (Скачано)")
+                    except Exception as e:
+                        print(f"  ⚠️ Не удалось скачать фото {message.id}: {e}")
 
                 dolls_data.append(doll_entry)
                 
     except FloodWait as e:
-        print(f"CRITICAL FLOOD WAIT in history loop: {e.value}")
+        print(f"CRITICAL FLOOD WAIT: {e.value}")
         await asyncio.sleep(e.value + 10)
     except Exception as e:
         print(f"Global Error: {e}")
@@ -173,7 +166,7 @@ async def parse_channel():
     with open(OUTPUT_JSON_FILE, 'w', encoding='utf-8') as f:
         json.dump(dolls_data, f, ensure_ascii=False, indent=4)
         
-    print(f"\n-> ✨ Готово! Обработано товаров: {len(dolls_data)}")
+    print(f"\n-> ✅ Готово! Товаров: {len(dolls_data)}")
 
 if __name__ == "__main__":
     asyncio.run(parse_channel())

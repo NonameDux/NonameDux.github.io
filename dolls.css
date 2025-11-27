@@ -18,64 +18,48 @@ body {
     color: var(--text-dark);
     padding-bottom: 50px;
     transition: background 0.5s ease, color 0.5s ease;
+    overflow-x: hidden; /* Убираем горизонтальный скролл */
 }
 
-/* --- MAGIC MODE (ИСПРАВЛЕННЫЙ) --- */
+/* --- MAGIC MODE (ТЕМНАЯ ТЕМА) --- */
 body.magic-mode {
-    /* Темный графитовый фон в стиле Monster High */
-    background: linear-gradient(135deg, #1e272e 0%, #485460 100%); 
-    
-    /* Переопределение переменных для темной темы */
-    --text-dark: #ffffff;      /* Белый текст заголовков */
-    --text-gray: #d2dae2;      /* Светло-серый текст описания */
-    --card-bg: #2d3436;        /* Темный фон карточки */
-    --primary-color: #ff007f;  /* Ядовито-розовый */
+    background: linear-gradient(135deg, #2c3e50 0%, #000000 100%);
+    --text-dark: #ecf0f1;
+    --text-gray: #bdc3c7;
+    --card-bg: #34495e;
+    --primary-color: #ff007f;
 }
 
-/* Исправление кнопок в Magic Mode */
+/* Исправления кнопок в темной теме */
 body.magic-mode .filters button {
-    background: #485460;
-    color: white;
-    box-shadow: none;
-    border: 1px solid #57606f;
+    background: #4b6584; color: #fff;
 }
 body.magic-mode .filters button.active {
     background: var(--primary-color);
-    border-color: var(--primary-color);
-    color: white;
 }
 body.magic-mode .search-box input {
-    background: #485460;
-    color: white;
-    border-color: #57606f;
+    background: #4b6584; color: #fff; border-color: #4b6584;
 }
 body.magic-mode .controls-section {
-    background: rgba(0, 0, 0, 0.4); /* Затемненная панель */
-    border: 1px solid rgba(255,255,255,0.1);
+    background: rgba(0,0,0,0.5);
 }
 body.magic-mode select {
-    background: #485460;
-    color: white;
-    border: 1px solid #57606f;
+    background: #4b6584; color: white;
 }
 
-/* --- ОБЩИЕ СТИЛИ --- */
-
-/* Header */
+/* --- HEADER --- */
 header {
     text-align: center;
     padding: 40px 20px;
     font-family: 'Comfortaa', cursive;
 }
 header h1 {
-    font-size: 3rem;
-    margin: 0;
+    font-size: 3rem; margin: 0;
     background: -webkit-linear-gradient(45deg, var(--primary-color), var(--accent-purple));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     cursor: pointer;
     transition: transform 0.3s;
-    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
 }
 header h1:hover { transform: scale(1.05); }
 header p {
@@ -86,19 +70,14 @@ header p {
     font-weight: 700;
 }
 
-/* Controls */
+/* --- CONTROLS --- */
 .controls-section {
-    max-width: 1000px;
-    margin: 0 auto 40px;
-    padding: 20px;
+    max-width: 1000px; margin: 0 auto 40px; padding: 20px;
     background: rgba(255,255,255,0.7);
     backdrop-filter: blur(10px);
     border-radius: 25px;
     box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    transition: background 0.5s;
+    display: flex; flex-direction: column; gap: 20px;
 }
 
 .search-box { position: relative; width: 100%; }
@@ -108,9 +87,8 @@ header p {
 }
 .search-box input {
     width: 100%; padding: 15px 15px 15px 45px;
-    border: 2px solid transparent;
-    border-radius: 15px; font-size: 1rem; outline: none;
-    background: white; transition: all 0.3s;
+    border: 2px solid transparent; border-radius: 15px;
+    font-size: 1rem; outline: none; background: white;
     font-family: inherit; box-sizing: border-box;
 }
 
@@ -121,15 +99,10 @@ header p {
     cursor: pointer; transition: all 0.2s;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
-.filters button.active {
-    background: var(--primary-color); color: white;
-}
-select {
-    padding: 10px; border-radius: 20px; border: 1px solid #eee;
-    font-family: inherit; cursor: pointer;
-}
+.filters button.active { background: var(--primary-color); color: white; }
+select { padding: 10px; border-radius: 20px; border: 1px solid #eee; font-family: inherit; }
 
-/* Grid & Card */
+/* --- GRID & CARDS --- */
 .doll-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -141,13 +114,15 @@ select {
     background: var(--card-bg);
     border-radius: 20px; overflow: hidden;
     box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-    transition: transform 0.3s, background 0.5s;
+    transition: transform 0.3s;
     display: flex; flex-direction: column;
 }
 .card:hover { transform: translateY(-10px); }
 
 .card-img-box {
     height: 350px; position: relative; cursor: pointer; overflow: hidden;
+    /* Важно для клика */
+    z-index: 1; 
 }
 .card-img-box img {
     width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;
@@ -164,35 +139,18 @@ select {
 .type-stock .status-label { background: #00b894; }
 .type-preorder .status-label { background: #fdcb6e; color: #5d4037; }
 
-.hover-overlay {
-    position: absolute; top:0; left:0; width:100%; height:100%;
-    background: rgba(0,0,0,0.2);
-    display: flex; justify-content: center; align-items: center;
-    opacity: 0; transition: opacity 0.3s;
-}
-.hover-overlay i { font-size: 3rem; color: white; }
-.card-img-box:hover .hover-overlay { opacity: 1; }
-
-/* Card Content */
+/* Content */
 .card-body { padding: 20px; display: flex; flex-direction: column; flex-grow: 1; }
 .card-title {
-    margin: 0; font-size: 1.2rem;
+    margin: 0 0 10px; font-size: 1.2rem;
     font-family: 'Comfortaa', cursive; color: var(--text-dark);
 }
 
-/* Мета данные (комменты и фото) */
 .card-meta {
-    display: flex; gap: 15px; margin: 8px 0;
-    font-size: 0.85rem; color: var(--text-gray); opacity: 0.8;
+    display: flex; gap: 15px; margin-bottom: 10px;
+    font-size: 0.85rem; color: var(--text-gray);
 }
 .card-meta span { display: flex; align-items: center; gap: 5px; }
-
-.condition-badge {
-    background: linear-gradient(45deg, #a29bfe, #74b9ff);
-    color: white; padding: 6px 10px; border-radius: 10px;
-    font-size: 0.85rem; margin-bottom: 10px; display: inline-block;
-    font-weight: 600; align-self: flex-start;
-}
 
 .price-block {
     display: flex; align-items: baseline; gap: 10px; margin-bottom: 10px;
@@ -201,8 +159,13 @@ select {
     font-size: 1.5rem; font-weight: 800; color: var(--primary-color);
 }
 .delivery {
-    font-size: 0.8rem; background: #fff3cd; color: #856404;
-    padding: 2px 6px; border-radius: 5px;
+    font-size: 0.8rem; background: #fff3cd; color: #856404; padding: 2px 6px; border-radius: 5px;
+}
+
+.condition-badge {
+    background: linear-gradient(45deg, #a29bfe, #74b9ff);
+    color: white; padding: 6px 10px; border-radius: 10px;
+    font-size: 0.85rem; margin-bottom: 10px; display: inline-block;
 }
 
 .card-text {
@@ -215,20 +178,55 @@ select {
 
 .buy-btn {
     margin-top: auto;
-    background: var(--text-dark);
-    color: white; /* Всегда белый текст на кнопке */
+    background: var(--text-dark); color: white;
     text-align: center; padding: 12px; border-radius: 12px;
     text-decoration: none; font-weight: 700; transition: 0.3s;
 }
-/* В magic mode кнопка становится розовой для контраста */
-body.magic-mode .buy-btn {
-    background: var(--primary-color);
-    color: white;
-}
+body.magic-mode .buy-btn { background: var(--primary-color); }
 .buy-btn:hover { opacity: 0.9; transform: translateY(-2px); }
 
-/* Icons for Easter Egg */
+/* --- LIGHTBOX (Исправлено перекрытие) --- */
+.lightbox {
+    position: fixed; top:0; left:0; width:100%; height:100%;
+    background: rgba(0,0,0,0.9);
+    z-index: 10000; /* Максимальный слой */
+    display: none; justify-content: center; align-items: center;
+}
+.lightbox.active { display: flex; animation: fadeIn 0.3s; }
+.lightbox-content { max-width: 90%; max-height: 90vh; border-radius: 10px; }
+.close-btn { position: absolute; top:20px; right:30px; color:white; font-size:40px; cursor:pointer;}
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+/* --- EASTER EGG ICONS (Исправлено перекрытие) --- */
 .floating-icon {
-    position: fixed; font-size: 2rem; color: var(--gold);
-    display: none; z-index: 9999;
+    position: fixed;
+    font-size: 2rem;
+    color: var(--gold);
+    display: none; /* Скрыты по умолчанию */
+    z-index: 9000;
+    pointer-events: none; /* Пропускают клики сквозь себя */
+}
+/* --- СТИЛИ СЧЕТЧИКА ТОВАРОВ --- */
+.item-count-display {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    padding: 10px 0;
+    margin: 10px 0;
+    border-top: 1px dashed rgba(0, 0, 0, 0.1); 
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+    transition: color 0.5s;
+}
+.item-count-display i {
+    margin-right: 5px;
+    color: var(--primary-color);
+}
+
+/* Стилизация для Magic Mode (темная тема) */
+body.magic-mode .item-count-display {
+    color: var(--text-dark); /* Светлый цвет */
+    border-top: 1px dashed rgba(255, 255, 255, 0.1);
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
 }

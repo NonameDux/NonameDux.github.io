@@ -9,12 +9,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
-    <div class="easter-egg-container">
-        <i class="fas fa-skull floating-icon" style="top:10%; left:5%"></i>
-        <i class="fas fa-heart-broken floating-icon" style="top:20%; right:10%"></i>
-        <i class="fas fa-bolt floating-icon" style="top:50%; left:15%"></i>
-    </div>
-
     <div id="lightbox" class="lightbox" onclick="closeLightbox()">
         <span class="close-btn">&times;</span>
         <img class="lightbox-content" id="lightbox-img">
@@ -29,14 +23,13 @@
 
     <main>
         <section class="controls-section">
-            <section class="controls-section">
             <div class="search-box">
                 <i class="fas fa-magic"></i>
                 <input type="text" id="search-input" placeholder="Найти куклу мечты..." oninput="applyFilters()">
             </div>
             
             <div id="item-count" class="item-count-display"></div>
-        
+
             <div class="filters">
                 <button id="filter-all" class="active" onclick="setCategory('all')">Все чудеса</button>
                 <button id="filter-stock" onclick="setCategory('stock')">В наличии</button>
@@ -62,7 +55,7 @@
     </main>
 
     <footer>
-        <p>Создано Tenfy, для любимой Лизоньки <3</p>
+        <p>Created with 💖 for my love</p>
     </footer>
 
     <script>
@@ -70,10 +63,8 @@
         let allDollsData = [];
         let currentCategory = 'all';
 
-        // 1. Загрузка
         async function loadDolls() {
             try {
-                // Добавляем timestamp чтобы браузер не кешировал JSON жестко
                 const response = await fetch(JSON_URL + '?t=' + new Date().getTime());
                 if (!response.ok) throw new Error("Ошибка сети");
                 allDollsData = await response.json();
@@ -85,7 +76,6 @@
             }
         }
 
-        // 2. Категории
         function setCategory(category) {
             currentCategory = category;
             document.querySelectorAll('.filters button').forEach(btn => btn.classList.remove('active'));
@@ -93,7 +83,6 @@
             applyFilters();
         }
 
-        // 3. Фильтрация и Сортировка
         function applyFilters() {
             const searchQuery = document.getElementById('search-input').value.toLowerCase();
             const sortValue = document.getElementById('sort-select').value;
@@ -117,7 +106,6 @@
             renderDolls(filtered);
         }
 
-        // 4. Отрисовка
         function renderDolls(data) {
             const container = document.getElementById('dolls-container');
             container.innerHTML = '';
@@ -131,7 +119,6 @@
                 container.innerHTML = '<div class="empty-state">Ничего не найдено 🕸️</div>';
                 return;
             }
-            // ... остальная часть кода функции renderDolls ...
 
             data.forEach(doll => {
                 const isPreorder = doll.is_preorder;
@@ -201,7 +188,6 @@
             });
         }
 
-        // Лайтбокс
         function openLightbox(src) {
             if(!src || src === 'null') return;
             const lb = document.getElementById('lightbox');
@@ -214,23 +200,11 @@
             document.body.style.overflow = 'auto';
         }
 
-        // Пасхалка (Анимация и смена темы)
         function triggerEasterEgg() {
             document.body.classList.toggle('magic-mode');
             localStorage.setItem('theme', document.body.classList.contains('magic-mode') ? 'magic' : 'light');
-
-            // Анимация иконок
-            const icons = document.querySelectorAll('.floating-icon');
-            icons.forEach(icon => {
-                icon.style.display = 'block';
-                icon.style.animation = 'floatUp 3s ease-out forwards';
-            });
-            setTimeout(() => {
-                icons.forEach(icon => icon.style.display = 'none');
-            }, 3000);
         }
         
-        // Восстановление темы при загрузке
         if(localStorage.getItem('theme') === 'magic') {
             document.body.classList.add('magic-mode');
         }
@@ -239,5 +213,3 @@
     </script>
 </body>
 </html>
-
-

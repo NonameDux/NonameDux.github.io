@@ -1219,5 +1219,16 @@
         "link": "https://t.me/kabi_mlp/1580",
         "price": "590",
         "delivery_price": "100"
+    },
+    {
+        "id": 1560,
+        "text": "🎉Пінкі клоун🎉\n\nСтан: чуть брудненька\n\nЦіна: 130\n\n#наявність",
+        "photo_path": "static/doll_images/1560_photo.jpg",
+        "photo_count": 1,
+        "comment_count": 0,
+        "is_preorder": false,
+        "link": "https://t.me/kabi_mlp/1560",
+        "price": "130",
+        "delivery_price": null
     }
 ]

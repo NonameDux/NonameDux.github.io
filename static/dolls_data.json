@@ -1,5 +1,16 @@
 [
     {
+        "id": 2163,
+        "text": "🫧 Кінотеатр нрфб 🫧\n\nЦіна: 1370 + 100 дс\n\n#передзамовлення",
+        "photo_path": "static/doll_images/2163_photo.jpg",
+        "photo_count": 3,
+        "comment_count": 0,
+        "is_preorder": true,
+        "link": "https://t.me/kabi_mlp/2163",
+        "price": "1370",
+        "delivery_price": "100"
+    },
+    {
         "id": 2152,
         "text": "🫧Лот 🫧\n\nЦіна: 4410 + 300 дс\n\n#передзамовлення",
         "photo_path": "static/doll_images/2152_photo.jpg",
@@ -1174,72 +1185,6 @@
         "is_preorder": false,
         "link": "https://t.me/kabi_mlp/1600",
         "price": "90",
-        "delivery_price": null
-    },
-    {
-        "id": 1598,
-        "text": "🫧Ббшки прозорі/неонові🫧\n\nСтан: можливі незначні потертості та плямки\n\nЦіна: перша з карткою 90, інші по 80\n\n#наявність",
-        "photo_path": "static/doll_images/1598_photo.jpg",
-        "photo_count": 2,
-        "comment_count": 0,
-        "is_preorder": false,
-        "link": "https://t.me/kabi_mlp/1598",
-        "price": "90",
-        "delivery_price": null
-    },
-    {
-        "id": 1597,
-        "text": "🫧Ббшки🫧\n\nСтан: рейнбоу брудненька, на інших можливі незначні потертості та плямки\n\nЦіна: рейнбоу 60, інші по 70\n\n#наявність",
-        "photo_path": "static/doll_images/1597_photo.jpg",
-        "photo_count": 1,
-        "comment_count": 0,
-        "is_preorder": false,
-        "link": "https://t.me/kabi_mlp/1597",
-        "price": "60",
-        "delivery_price": null
-    },
-    {
-        "id": 1596,
-        "text": "🫧Ббшки🫧\n\nСтан: можливі не значні плямки та потертості\n\nЦіна: бджілка з карткою 80, Епл з блискучими пасмами 80, Епл звичайна 65, Ліра: 90\n\n#наявність",
-        "photo_path": "static/doll_images/1596_photo.jpg",
-        "photo_count": 1,
-        "comment_count": 0,
-        "is_preorder": false,
-        "link": "https://t.me/kabi_mlp/1596",
-        "price": "80",
-        "delivery_price": null
-    },
-    {
-        "id": 1594,
-        "text": "🫧Ббшки🫧\nнумерація з ліва на право\n\nСтан: 1 косоока, можливі не значні потертості та плямки\n\nЦіна: перша 65, інші по 80\n\n#наявність",
-        "photo_path": "static/doll_images/1594_photo.jpg",
-        "photo_count": 2,
-        "comment_count": 0,
-        "is_preorder": false,
-        "link": "https://t.me/kabi_mlp/1594",
-        "price": "65",
-        "delivery_price": null
-    },
-    {
-        "id": 1593,
-        "text": "🫧Ббшки🫧\nнумерація з ліва на право\n\nСтан: Даймонд брудненька, на інших можливі незначні плямки та потертості\n\nЦіна: по 65\n\n#наявність",
-        "photo_path": "static/doll_images/1593_photo.jpg",
-        "photo_count": 1,
-        "comment_count": 0,
-        "is_preorder": false,
-        "link": "https://t.me/kabi_mlp/1593",
-        "price": "65",
-        "delivery_price": null
-    },
-    {
-        "id": 1591,
-        "text": "🫧Ббшки Раріті🫧\nз ліва на право\n\nСтан: можливі не значні плямки/потертості\n\nЦіна: з картками 80, без 65\n\n#наявність",
-        "photo_path": "static/doll_images/1591_photo.jpg",
-        "photo_count": 2,
-        "comment_count": 0,
-        "is_preorder": false,
-        "link": "https://t.me/kabi_mlp/1591",
-        "price": "80",
         "delivery_price": null
     }
 ]

@@ -1,5 +1,16 @@
 [
     {
+        "id": 2178,
+        "text": "🫧 Лот 🫧\n\nСтарлайт, Водяна селестія\n\nЦіна: 980 + 100 дс\n\n#передзамовлення",
+        "photo_path": "static/doll_images/2178_photo.jpg",
+        "photo_count": 2,
+        "comment_count": 0,
+        "is_preorder": true,
+        "link": "https://t.me/kabi_mlp/2178",
+        "price": "980",
+        "delivery_price": "100"
+    },
+    {
         "id": 2163,
         "text": "🫧 Кінотеатр нрфб 🫧\n\nЦіна: 1370 + 100 дс\n\n#передзамовлення",
         "photo_path": "static/doll_images/2163_photo.jpg",

@@ -77,17 +77,6 @@
         "delivery_price": "200"
     },
     {
-        "id": 2091,
-        "text": "🫧 Лот 🫧\n\nДейзі крилатка, купа г2, г3, г3.5\n\nЦіна: 2980 + 300 дс\n\n#передзамовлення",
-        "photo_path": "static/doll_images/2091_photo.jpg",
-        "photo_count": 1,
-        "comment_count": 0,
-        "is_preorder": true,
-        "link": "https://t.me/kabi_mlp/2091",
-        "price": "2980",
-        "delivery_price": "300"
-    },
-    {
         "id": 2070,
         "text": "🫧 Лот егм 🫧\n\nАдажіо, Тріксі, Дерпі, Сансет\n\nЦіна: 4480 + 250 дс\n\n#передзамовлення",
         "photo_path": "static/doll_images/2070_photo.jpg",
@@ -1164,16 +1153,5 @@
         "link": "https://t.me/kabi_mlp/1626",
         "price": "2370",
         "delivery_price": "100"
-    },
-    {
-        "id": 1620,
-        "text": "🫧Нрфб пакетики🫧\n\nЦіна: 290 за штуку\n\nЩоб викупити треба розібрати всі з якогось одного фото\n\n#передзамовлення",
-        "photo_path": "static/doll_images/1620_photo.jpg",
-        "photo_count": 4,
-        "comment_count": 0,
-        "is_preorder": true,
-        "link": "https://t.me/kabi_mlp/1620",
-        "price": "290",
-        "delivery_price": null
     }
 ]

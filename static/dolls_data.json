@@ -1,5 +1,60 @@
 [
     {
+        "id": 2203,
+        "text": "🫧 Лот 🫧\n\nПляжна Тріксі, Сансет, база Тріксі \n\nЦіна: 5770 + 200 дс\n\n#передзамовлення",
+        "photo_path": "static/doll_images/2203_photo.jpg",
+        "photo_count": 2,
+        "comment_count": 0,
+        "is_preorder": true,
+        "link": "https://t.me/kabi_mlp/2203",
+        "price": "5770",
+        "delivery_price": "200"
+    },
+    {
+        "id": 2197,
+        "text": "🫧 Хані Баз 🫧\n\nЦіна: 5880 + 100 дс\n\n#передзамовлення \n\nЯ знаю, що в Україні можна взяти дешевше, але на даний момент це найдешевший варіант в Європі\nСкоріше для тих, хто хоче хані тут і зарад",
+        "photo_path": "static/doll_images/2197_photo.jpg",
+        "photo_count": 4,
+        "comment_count": 0,
+        "is_preorder": true,
+        "link": "https://t.me/kabi_mlp/2197",
+        "price": "5880",
+        "delivery_price": "100"
+    },
+    {
+        "id": 2187,
+        "text": "🫧Лот🫧\n\nДью пластик, Сансет, Чірайлі база\n\nЦіна: 2190 + 200 дс\n\n#передзамовлення",
+        "photo_path": "static/doll_images/2187_photo.jpg",
+        "photo_count": 1,
+        "comment_count": 0,
+        "is_preorder": true,
+        "link": "https://t.me/kabi_mlp/2187",
+        "price": "2190",
+        "delivery_price": "200"
+    },
+    {
+        "id": 2163,
+        "text": "🫧 Кінотеатр нрфб 🫧\n\nЦіна: 1370 + 100 дс\n\n#передзамовлення",
+        "photo_path": "static/doll_images/2163_photo.jpg",
+        "photo_count": 3,
+        "comment_count": 0,
+        "is_preorder": true,
+        "link": "https://t.me/kabi_mlp/2163",
+        "price": "1370",
+        "delivery_price": "100"
+    },
+    {
+        "id": 2152,
+        "text": "🫧Лот 🫧\n\nЦіна: 4410 + 300 дс\n\n#передзамовлення",
+        "photo_path": "static/doll_images/2152_photo.jpg",
+        "photo_count": 1,
+        "comment_count": 0,
+        "is_preorder": true,
+        "link": "https://t.me/kabi_mlp/2152",
+        "price": "4410",
+        "delivery_price": "300"
+    },
+    {
         "id": 2132,
         "text": "🫧 Лот 🫧\n\nСансет, Тріксі егм\n\nЦіна: 1020 + 200 дс\n\n#передзамовлення",
         "photo_path": "static/doll_images/2132_photo.jpg",
@@ -42,17 +97,6 @@
         "link": "https://t.me/kabi_mlp/2101",
         "price": "1530",
         "delivery_price": "200"
-    },
-    {
-        "id": 2091,
-        "text": "🫧 Лот 🫧\n\nДейзі крилатка, купа г2, г3, г3.5\n\nЦіна: 2980 + 300 дс\n\n#передзамовлення",
-        "photo_path": "static/doll_images/2091_photo.jpg",
-        "photo_count": 1,
-        "comment_count": 0,
-        "is_preorder": true,
-        "link": "https://t.me/kabi_mlp/2091",
-        "price": "2980",
-        "delivery_price": "300"
     },
     {
         "id": 2070,
@@ -1120,137 +1164,5 @@
         "link": "https://t.me/kabi_mlp/1638",
         "price": "50",
         "delivery_price": null
-    },
-    {
-        "id": 1626,
-        "text": "🫧ЛОТ🫧\n\nФлатті база, Сурі, Чері Пай перламутр, Сапфір Джой, міні Селестія \n\nЦіна: 2370 + 100 дс\n\n#передзамовлення",
-        "photo_path": "static/doll_images/1626_photo.jpg",
-        "photo_count": 1,
-        "comment_count": 0,
-        "is_preorder": true,
-        "link": "https://t.me/kabi_mlp/1626",
-        "price": "2370",
-        "delivery_price": "100"
-    },
-    {
-        "id": 1620,
-        "text": "🫧Нрфб пакетики🫧\n\nЦіна: 290 за штуку\n\nЩоб викупити треба розібрати всі з якогось одного фото\n\n#передзамовлення",
-        "photo_path": "static/doll_images/1620_photo.jpg",
-        "photo_count": 4,
-        "comment_count": 0,
-        "is_preorder": true,
-        "link": "https://t.me/kabi_mlp/1620",
-        "price": "290",
-        "delivery_price": null
-    },
-    {
-        "id": 1603,
-        "text": "🫧Містер Керот🫧\n\nСтан: можливі незначні потертості та плямки\n\nЦіна: 130\n\n#наявність",
-        "photo_path": "static/doll_images/1603_photo.jpg",
-        "photo_count": 1,
-        "comment_count": 0,
-        "is_preorder": false,
-        "link": "https://t.me/kabi_mlp/1603",
-        "price": "130",
-        "delivery_price": null
-    },
-    {
-        "id": 1600,
-        "text": "🫧Ббшки прозорі/неонові🫧\n\nВсі з картками\n\nСтан: можливі незначні потертості та плямки\n\nЦіна: по 90\n\n#наявність",
-        "photo_path": "static/doll_images/1600_photo.jpg",
-        "photo_count": 2,
-        "comment_count": 0,
-        "is_preorder": false,
-        "link": "https://t.me/kabi_mlp/1600",
-        "price": "90",
-        "delivery_price": null
-    },
-    {
-        "id": 1598,
-        "text": "🫧Ббшки прозорі/неонові🫧\n\nСтан: можливі незначні потертості та плямки\n\nЦіна: перша з карткою 90, інші по 80\n\n#наявність",
-        "photo_path": "static/doll_images/1598_photo.jpg",
-        "photo_count": 2,
-        "comment_count": 0,
-        "is_preorder": false,
-        "link": "https://t.me/kabi_mlp/1598",
-        "price": "90",
-        "delivery_price": null
-    },
-    {
-        "id": 1597,
-        "text": "🫧Ббшки🫧\n\nСтан: рейнбоу брудненька, на інших можливі незначні потертості та плямки\n\nЦіна: рейнбоу 60, інші по 70\n\n#наявність",
-        "photo_path": "static/doll_images/1597_photo.jpg",
-        "photo_count": 1,
-        "comment_count": 0,
-        "is_preorder": false,
-        "link": "https://t.me/kabi_mlp/1597",
-        "price": "60",
-        "delivery_price": null
-    },
-    {
-        "id": 1596,
-        "text": "🫧Ббшки🫧\n\nСтан: можливі не значні плямки та потертості\n\nЦіна: бджілка з карткою 80, Епл з блискучими пасмами 80, Епл звичайна 65, Ліра: 90\n\n#наявність",
-        "photo_path": "static/doll_images/1596_photo.jpg",
-        "photo_count": 1,
-        "comment_count": 0,
-        "is_preorder": false,
-        "link": "https://t.me/kabi_mlp/1596",
-        "price": "80",
-        "delivery_price": null
-    },
-    {
-        "id": 1594,
-        "text": "🫧Ббшки🫧\nнумерація з ліва на право\n\nСтан: 1 косоока, можливі не значні потертості та плямки\n\nЦіна: перша 65, інші по 80\n\n#наявність",
-        "photo_path": "static/doll_images/1594_photo.jpg",
-        "photo_count": 2,
-        "comment_count": 0,
-        "is_preorder": false,
-        "link": "https://t.me/kabi_mlp/1594",
-        "price": "65",
-        "delivery_price": null
-    },
-    {
-        "id": 1593,
-        "text": "🫧Ббшки🫧\nнумерація з ліва на право\n\nСтан: Даймонд брудненька, на інших можливі незначні плямки та потертості\n\nЦіна: по 65\n\n#наявність",
-        "photo_path": "static/doll_images/1593_photo.jpg",
-        "photo_count": 1,
-        "comment_count": 0,
-        "is_preorder": false,
-        "link": "https://t.me/kabi_mlp/1593",
-        "price": "65",
-        "delivery_price": null
-    },
-    {
-        "id": 1591,
-        "text": "🫧Ббшки Раріті🫧\nз ліва на право\n\nСтан: можливі не значні плямки/потертості\n\nЦіна: з картками 80, без 65\n\n#наявність",
-        "photo_path": "static/doll_images/1591_photo.jpg",
-        "photo_count": 2,
-        "comment_count": 0,
-        "is_preorder": false,
-        "link": "https://t.me/kabi_mlp/1591",
-        "price": "80",
-        "delivery_price": null
-    },
-    {
-        "id": 1585,
-        "text": "🫧Діскорд🫧\n\nЦіна: 550 + 100 дс\n\n#передзамовлення",
-        "photo_path": "static/doll_images/1585_photo.jpg",
-        "photo_count": 1,
-        "comment_count": 0,
-        "is_preorder": true,
-        "link": "https://t.me/kabi_mlp/1585",
-        "price": "550",
-        "delivery_price": "100"
-    },
-    {
-        "id": 1580,
-        "text": "🫧Лот🫧\n\nТріксі і Діджей ребути\n\nЦіна: 590 + 100 дс\n\n#передзамовлення",
-        "photo_path": "static/doll_images/1580_photo.jpg",
-        "photo_count": 1,
-        "comment_count": 0,
-        "is_preorder": true,
-        "link": "https://t.me/kabi_mlp/1580",
-        "price": "590",
-        "delivery_price": "100"
     }
 ]

@@ -185,6 +185,20 @@ p{
     margin-left: 5%;
 
 }
+#Frame1 a{
+    font-family: 'Pacifico', cursive; font-size: 1.2em; margin: 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    transition: ease 0.5s all;
+    text-decoration: none;
+    color: black;
+    border-radius: 25px;
+    background: white;
+}
+#Frame1 a:hover{
+    transform: translateY(-5px);
+    background: linear-gradient(120deg, #ff9a9e 0%, #fecfef 100%);
+    box-shadow: 0 15px 30px rgba(255, 105, 180, 0.3);
+    color:white;
+}
 #Gallery{
     padding: 5px;
     display: flex;

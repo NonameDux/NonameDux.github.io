@@ -1120,38 +1120,5 @@
         "link": "https://t.me/kabi_mlp/1644",
         "price": "110",
         "delivery_price": null
-    },
-    {
-        "id": 1641,
-        "text": "💎Раріті кристальна пластик💎\nпід ооак\n\nСтан: стрижена, трохи брудненька, дф на оці\n\nЦіна: 90\n\n#наявність",
-        "photo_path": "static/doll_images/1641_photo.jpg",
-        "photo_count": 1,
-        "comment_count": 0,
-        "is_preorder": false,
-        "link": "https://t.me/kabi_mlp/1641",
-        "price": "90",
-        "delivery_price": null
-    },
-    {
-        "id": 1640,
-        "text": "💎Раріті кристальна пластик💎\nпід ооак\n\nСтан: емо зачіска, брудненька\n\nЦіна: 90\n\n#наявність",
-        "photo_path": "static/doll_images/1640_photo.jpg",
-        "photo_count": 1,
-        "comment_count": 0,
-        "is_preorder": false,
-        "link": "https://t.me/kabi_mlp/1640",
-        "price": "90",
-        "delivery_price": null
-    },
-    {
-        "id": 1639,
-        "text": "🎉Пінкі кристальна пластик🎉\n\nСтан: емо зачіска, заводський дф на шиї (майже не помітно), чуть пухнастий кінчик хвоста\n\nЦіна: 100\n\n#наявність",
-        "photo_path": "static/doll_images/1639_photo.jpg",
-        "photo_count": 1,
-        "comment_count": 0,
-        "is_preorder": false,
-        "link": "https://t.me/kabi_mlp/1639",
-        "price": "100",
-        "delivery_price": null
     }
 ]

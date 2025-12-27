@@ -1,5 +1,82 @@
 [
     {
+        "id": 2260,
+        "text": "🌸Флаттершай пасхальна🌸\n\nСтан: ідеальна\n\nЦіна: 750\n\n#наявність",
+        "photo_path": "static/doll_images/2260_photo.jpg",
+        "photo_count": 1,
+        "comment_count": 0,
+        "is_preorder": false,
+        "link": "https://t.me/kabi_mlp/2260",
+        "price": "750",
+        "delivery_price": null
+    },
+    {
+        "id": 2244,
+        "text": "🫧Світі бель г3.5🫧\n\nСтан: жорстка гривка, може стрижена\n\nЦіна: 50\n\n#наявність",
+        "photo_path": "static/doll_images/2244_photo.jpg",
+        "photo_count": 1,
+        "comment_count": 0,
+        "is_preorder": false,
+        "link": "https://t.me/kabi_mlp/2244",
+        "price": "50",
+        "delivery_price": null
+    },
+    {
+        "id": 2242,
+        "text": "🎉Пінкі г3.5🎉\n\nСтан: міні плямки, майже фул комплект\n\nЦіна: 180\n\n#наявність",
+        "photo_path": "static/doll_images/2242_photo.jpg",
+        "photo_count": 2,
+        "comment_count": 0,
+        "is_preorder": false,
+        "link": "https://t.me/kabi_mlp/2242",
+        "price": "180",
+        "delivery_price": null
+    },
+    {
+        "id": 2233,
+        "text": "🫧 Спайк 🫧\n\nСтан: потертість на оці\n\nЦіна: 50\n\n#наявність",
+        "photo_path": "static/doll_images/2233_photo.jpg",
+        "photo_count": 1,
+        "comment_count": 0,
+        "is_preorder": false,
+        "link": "https://t.me/kabi_mlp/2233",
+        "price": "50",
+        "delivery_price": null
+    },
+    {
+        "id": 2232,
+        "text": "🫧 Ббшки 🫧 \n\nЦіна: по 60\n\n#наявність",
+        "photo_path": "static/doll_images/2232_photo.jpg",
+        "photo_count": 1,
+        "comment_count": 0,
+        "is_preorder": false,
+        "link": "https://t.me/kabi_mlp/2232",
+        "price": "60",
+        "delivery_price": null
+    },
+    {
+        "id": 2231,
+        "text": "🫧 Ббшки 🫧\n\nЦіна: по 55\n\n#наявність",
+        "photo_path": "static/doll_images/2231_photo.jpg",
+        "photo_count": 1,
+        "comment_count": 0,
+        "is_preorder": false,
+        "link": "https://t.me/kabi_mlp/2231",
+        "price": "55",
+        "delivery_price": null
+    },
+    {
+        "id": 2230,
+        "text": "🫧 Ббшки 🫧\nз картками\n\nЦіна: по 70 \n\n#наявність",
+        "photo_path": "static/doll_images/2230_photo.jpg",
+        "photo_count": 1,
+        "comment_count": 0,
+        "is_preorder": false,
+        "link": "https://t.me/kabi_mlp/2230",
+        "price": "70",
+        "delivery_price": null
+    },
+    {
         "id": 2203,
         "text": "🫧 Лот 🫧\n\nПляжна Тріксі, Сансет, база Тріксі \n\nЦіна: 5770 + 200 дс\n\n#передзамовлення",
         "photo_path": "static/doll_images/2203_photo.jpg",
@@ -1021,104 +1098,5 @@
         "link": "https://t.me/kabi_mlp/1698",
         "price": "2850",
         "delivery_price": "100"
-    },
-    {
-        "id": 1684,
-        "text": "🫧Розбір🫧\n\nПінкі база: 190 @mirayn_mari\nКаденс ребут: 120\nНайтмер: 700 @free_breath_of_the_wind\nДью резина: 550\nРаріті від мінті: 150\nШайнінг ребут: 200\nШайнінг: 170 @free_breath_of_the_wind\nСансет: 550 @bro8121\nЕпл чолкаста: 350\nРейнбоу від мінті: 150 @ilonkakolisnuk\nКаденс: 200\nТвайлайт кмм:  200\nРаріті кмм: 200 @ilonkakolisnuk\nРаріті рп: 160 @Aa457kanon\nТвай потяг з аксами: 200\nПінкі рп: 160\nМінті: 850 @marylinngrimmofficial\n\nВсіх поні приведу до ладу🩵\n\nДс до України безкоштовна\nПо часу буде десь 2 тижні\n\nБронюйте поні в коментарях\nТільки текстом, змінені не враховую\n\n#передзамовлення",
-        "photo_path": "static/doll_images/1684_photo.jpg",
-        "photo_count": 1,
-        "comment_count": 0,
-        "is_preorder": true,
-        "link": "https://t.me/kabi_mlp/1684",
-        "price": null,
-        "delivery_price": null
-    },
-    {
-        "id": 1681,
-        "text": "🫧 Чері нрфб 🫧\n\nЦіна: 3320 + 100 дс\n\n#передзамовлення",
-        "photo_path": "static/doll_images/1681_photo.jpg",
-        "photo_count": 2,
-        "comment_count": 0,
-        "is_preorder": true,
-        "link": "https://t.me/kabi_mlp/1681",
-        "price": "3320",
-        "delivery_price": "100"
-    },
-    {
-        "id": 1660,
-        "text": "🩵Старлайт ребут🩵\n\nСтан: ідеальна, гривка шовк\n\nЦіна: 250\n\n#наявність",
-        "photo_path": "static/doll_images/1660_photo.jpg",
-        "photo_count": 1,
-        "comment_count": 0,
-        "is_preorder": false,
-        "link": "https://t.me/kabi_mlp/1660",
-        "price": "250",
-        "delivery_price": null
-    },
-    {
-        "id": 1655,
-        "text": "✨Твайлайт кристальна резина✨\n\nСтан: ідеал з короною\n\nЦіна: 250\n\n#наявність",
-        "photo_path": "static/doll_images/1655_photo.jpg",
-        "photo_count": 1,
-        "comment_count": 0,
-        "is_preorder": false,
-        "link": "https://t.me/kabi_mlp/1655",
-        "price": "250",
-        "delivery_price": null
-    },
-    {
-        "id": 1648,
-        "text": "✨Твайлайт брізі✨\n\nСтан: стрижена прядка в гриві, стрижений хвіст\nПлямки у вушках і на розі стерлись\n\nЦіна: 165\n\n#наявність",
-        "photo_path": "static/doll_images/1648_photo.jpg",
-        "photo_count": 1,
-        "comment_count": 0,
-        "is_preorder": false,
-        "link": "https://t.me/kabi_mlp/1648",
-        "price": "165",
-        "delivery_price": null
-    },
-    {
-        "id": 1647,
-        "text": "🌈Рейнбоу кристальна пластик🌈\n\nСтан: майже ідеал, трохи різнотон, міні заводський дф на оці, чуть пухнастий хвостик\n\nЦіна: 220\n\n#наявність",
-        "photo_path": "static/doll_images/1647_photo.jpg",
-        "photo_count": 1,
-        "comment_count": 0,
-        "is_preorder": false,
-        "link": "https://t.me/kabi_mlp/1647",
-        "price": "220",
-        "delivery_price": null
-    },
-    {
-        "id": 1646,
-        "text": "🎉Пінкі кристальна пластик🎉\n\nСтан: трохи брудна голова, поїхало одне око, жовта цятка на кінчику носика\nБруд с копит відтерся\n\nЦіна: 150\n\n#наявність",
-        "photo_path": "static/doll_images/1646_photo.jpg",
-        "photo_count": 1,
-        "comment_count": 0,
-        "is_preorder": false,
-        "link": "https://t.me/kabi_mlp/1646",
-        "price": "150",
-        "delivery_price": null
-    },
-    {
-        "id": 1645,
-        "text": "🌈Рейнбоу резина🌈\n\nСтан: дф на оці, плямка на копиті, чуть брудна голова\n\nЦіна: 115\n\n#наявність",
-        "photo_path": "static/doll_images/1645_photo.jpg",
-        "photo_count": 1,
-        "comment_count": 0,
-        "is_preorder": false,
-        "link": "https://t.me/kabi_mlp/1645",
-        "price": "115",
-        "delivery_price": null
-    },
-    {
-        "id": 1644,
-        "text": "✨Твайлайт курочка✨\n\nСтан: пухнаста грива, царапини, декілька міні плямок на крилі\n\nЦіна: 110\n\n#наявність",
-        "photo_path": "static/doll_images/1644_photo.jpg",
-        "photo_count": 1,
-        "comment_count": 0,
-        "is_preorder": false,
-        "link": "https://t.me/kabi_mlp/1644",
-        "price": "110",
-        "delivery_price": null
     }
 ]

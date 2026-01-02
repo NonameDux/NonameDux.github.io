@@ -1,5 +1,16 @@
 [
     {
+        "id": 2294,
+        "text": "🫧 Лот 🫧\n\nДейзі чолочка\n\nЦіна: 1270 + 200 дс\n\n#передзамовлення",
+        "photo_path": "static/doll_images/2294_photo.jpg",
+        "photo_count": 4,
+        "comment_count": 0,
+        "is_preorder": true,
+        "link": "https://t.me/kabi_mlp/2294",
+        "price": "1270",
+        "delivery_price": "200"
+    },
+    {
         "id": 2260,
         "text": "🌸Флаттершай пасхальна🌸\n\nСтан: ідеальна\n\nЦіна: 750\n\n#наявність",
         "photo_path": "static/doll_images/2260_photo.jpg",
@@ -1052,17 +1063,6 @@
         "comment_count": 0,
         "is_preorder": false,
         "link": "https://t.me/kabi_mlp/1714",
-        "price": "80",
-        "delivery_price": null
-    },
-    {
-        "id": 1709,
-        "text": "🫧 Ббшки з картками 🫧\nз ліва на право\n\nСтан: можливі не значні плямки або потертості\n\nЦіна: по 80\n\n#наявність",
-        "photo_path": "static/doll_images/1709_photo.jpg",
-        "photo_count": 2,
-        "comment_count": 0,
-        "is_preorder": false,
-        "link": "https://t.me/kabi_mlp/1709",
         "price": "80",
         "delivery_price": null
     }

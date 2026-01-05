@@ -1021,49 +1021,5 @@
         "link": "https://t.me/kabi_mlp/1731",
         "price": "650",
         "delivery_price": "70"
-    },
-    {
-        "id": 1725,
-        "text": "🫧 Плейсет понівільки 🫧\nпатєряшка😭\n\nСтан: потертості, плямки, дод фото в коментарях\n\nЦіна: 170\n\n#наявність",
-        "photo_path": "static/doll_images/1725_photo.jpg",
-        "photo_count": 1,
-        "comment_count": 0,
-        "is_preorder": false,
-        "link": "https://t.me/kabi_mlp/1725",
-        "price": "170",
-        "delivery_price": null
-    },
-    {
-        "id": 1718,
-        "text": "🫧 Твайлайт бб 🫧\n\nСтан: можливі не значні плямки або потертості \n\nЦіна: 120\nСпайк тому хто перший напише аніме на літеру Д\n\n#наявність",
-        "photo_path": "static/doll_images/1718_photo.jpg",
-        "photo_count": 1,
-        "comment_count": 0,
-        "is_preorder": false,
-        "link": "https://t.me/kabi_mlp/1718",
-        "price": "120",
-        "delivery_price": null
-    },
-    {
-        "id": 1716,
-        "text": "🫧 Ббшки з картками 🫧\nз ліва на право\n\nСтан: можливі не значні плямки або потертості\n\nЦіна: по 90\n\n#наявність",
-        "photo_path": "static/doll_images/1716_photo.jpg",
-        "photo_count": 2,
-        "comment_count": 0,
-        "is_preorder": false,
-        "link": "https://t.me/kabi_mlp/1716",
-        "price": "90",
-        "delivery_price": null
-    },
-    {
-        "id": 1714,
-        "text": "🫧 Ббшки блискучки 🫧\nз ліва на право\n\nСтан: можливі не значні потертості\n\nЦіна: по 80\n\n#наявність",
-        "photo_path": "static/doll_images/1714_photo.jpg",
-        "photo_count": 1,
-        "comment_count": 0,
-        "is_preorder": false,
-        "link": "https://t.me/kabi_mlp/1714",
-        "price": "80",
-        "delivery_price": null
     }
 ]

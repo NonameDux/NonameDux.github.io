@@ -1,5 +1,16 @@
 [
     {
+        "id": 2330,
+        "text": "🫧 Лот 🫧\n\nЯкщо правильно порахувала 110 г3 та г1\n\nЦіна: 11200 + 300 дс\n\n#передзамовлення",
+        "photo_path": "static/doll_images/2330_photo.jpg",
+        "photo_count": 5,
+        "comment_count": 0,
+        "is_preorder": true,
+        "link": "https://t.me/kabi_mlp/2330",
+        "price": "11200",
+        "delivery_price": "300"
+    },
+    {
         "id": 2294,
         "text": "🫧 Лот 🫧\n\nДейзі чолочка\n\nЦіна: 1270 + 200 дс\n\n#передзамовлення",
         "photo_path": "static/doll_images/2294_photo.jpg",
@@ -1010,16 +1021,5 @@
         "link": "https://t.me/kabi_mlp/1745",
         "price": "1190",
         "delivery_price": "100"
-    },
-    {
-        "id": 1731,
-        "text": "🫧 Лот 🫧\n\nПлумет, рпшки\n\nЦіна: 650 + 70 дс\n\n#передзамовлення",
-        "photo_path": "static/doll_images/1731_photo.jpg",
-        "photo_count": 1,
-        "comment_count": 0,
-        "is_preorder": true,
-        "link": "https://t.me/kabi_mlp/1731",
-        "price": "650",
-        "delivery_price": "70"
     }
 ]

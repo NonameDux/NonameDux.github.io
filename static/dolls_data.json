@@ -1,5 +1,16 @@
 [
     {
+        "id": 2360,
+        "text": "🫧Лот🫧\n\nФлатт темноволоса, Епл база, Рейнбоу кристальна пластик\n\nЦіна: 1110 + 100 дс\n\n#передзамовлення",
+        "photo_path": "static/doll_images/2360_photo.jpg",
+        "photo_count": 1,
+        "comment_count": 0,
+        "is_preorder": true,
+        "link": "https://t.me/kabi_mlp/2360",
+        "price": "1110",
+        "delivery_price": "100"
+    },
+    {
         "id": 2357,
         "text": "🫧Лот🫧\n\nСансет, Твайлайт замок, Скуталу, Твайлайт русалка фігурка, Твайлайт курочка плейсет\n\nЦіна: 2490 + 250 дс\n\n#передзамовлення",
         "photo_path": "static/doll_images/2357_photo.jpg",
@@ -833,127 +844,6 @@
         "is_preorder": true,
         "link": "https://t.me/kabi_mlp/1816",
         "price": "1120",
-        "delivery_price": "100"
-    },
-    {
-        "id": 1798,
-        "text": "✨Твайлайт резина✨\n\nСтан: одна прядка чуть стрижена\n\nЦіна: 190\n\n#наявність",
-        "photo_path": "static/doll_images/1798_photo.jpg",
-        "photo_count": 1,
-        "comment_count": 0,
-        "is_preorder": false,
-        "link": "https://t.me/kabi_mlp/1798",
-        "price": "190",
-        "delivery_price": null
-    },
-    {
-        "id": 1797,
-        "text": "🍎Епл база🍎\n\nСтан: 9/10 міні цятка на копиті, міні потертість на кьюті\n\nЦіна: 190\n\n#наявність",
-        "photo_path": "static/doll_images/1797_photo.jpg",
-        "photo_count": 1,
-        "comment_count": 0,
-        "is_preorder": false,
-        "link": "https://t.me/kabi_mlp/1797",
-        "price": "190",
-        "delivery_price": null
-    },
-    {
-        "id": 1793,
-        "text": "✨Твайлайт курочка✨\nз рідними аксами\n\nСтан: жорстка грива, крила тримаються на резинці\n\nЦіна: 150\n\n#наявність",
-        "photo_path": "static/doll_images/1793_photo.jpg",
-        "photo_count": 1,
-        "comment_count": 0,
-        "is_preorder": false,
-        "link": "https://t.me/kabi_mlp/1793",
-        "price": "150",
-        "delivery_price": null
-    },
-    {
-        "id": 1792,
-        "text": "🌈Рейнбоу🌈\n\nСтан: пожовтіння місцями, чуть стрижені прядки в гриві\n\nЦіна: 100\n\n#наявність",
-        "photo_path": "static/doll_images/1792_photo.jpg",
-        "photo_count": 1,
-        "comment_count": 0,
-        "is_preorder": false,
-        "link": "https://t.me/kabi_mlp/1792",
-        "price": "100",
-        "delivery_price": null
-    },
-    {
-        "id": 1784,
-        "text": "🍎Епл ребут🍎\n\nСтан: плямка на лобі, в іншому ідеал з заводською резинкою\n\nЦіна: 110\n\n#наявність",
-        "photo_path": "static/doll_images/1784_photo.jpg",
-        "photo_count": 2,
-        "comment_count": 0,
-        "is_preorder": false,
-        "link": "https://t.me/kabi_mlp/1784",
-        "price": "110",
-        "delivery_price": null
-    },
-    {
-        "id": 1783,
-        "text": "✨Ексклюзивний сет г3.5✨\n\nСтан: 9.5/10 у синьої ледь помітна плямка, у рожевої темне на лобі\n\nЦіна: 300 за двох\n\n#наявність",
-        "photo_path": "static/doll_images/1783_photo.jpg",
-        "photo_count": 1,
-        "comment_count": 0,
-        "is_preorder": false,
-        "link": "https://t.me/kabi_mlp/1783",
-        "price": "300",
-        "delivery_price": null
-    },
-    {
-        "id": 1779,
-        "text": "🎉Пінкі з візком🎉\n\nСтан: ідеалка, але не всі акси є\n\nЦіна: 120\n\n#наявність",
-        "photo_path": "static/doll_images/1779_photo.jpg",
-        "photo_count": 1,
-        "comment_count": 0,
-        "is_preorder": false,
-        "link": "https://t.me/kabi_mlp/1779",
-        "price": "120",
-        "delivery_price": null
-    },
-    {
-        "id": 1778,
-        "text": "🌪️Буря🌪️\n\nСтан: потертості, міні плямки\n\nЦіна: 100\n\n#наявність",
-        "photo_path": "static/doll_images/1778_photo.jpg",
-        "photo_count": 1,
-        "comment_count": 0,
-        "is_preorder": false,
-        "link": "https://t.me/kabi_mlp/1778",
-        "price": "100",
-        "delivery_price": null
-    },
-    {
-        "id": 1775,
-        "text": "🫧Літак г3.5🫧\n\nСтан: є поламані елементи, показала на фото, плямки і потертості\nПульт працює, пісеньки грає, в літаку міняти батарейки не пробувала\n\nЦіна: 120\n\n#наявність",
-        "photo_path": "static/doll_images/1775_photo.jpg",
-        "photo_count": 1,
-        "comment_count": 0,
-        "is_preorder": false,
-        "link": "https://t.me/kabi_mlp/1775",
-        "price": "120",
-        "delivery_price": null
-    },
-    {
-        "id": 1768,
-        "text": "✨Твайлайт база✨\n\nСтан: стрижена, потертість на оці\n\nЦіна: 90\n\n#наявність",
-        "photo_path": "static/doll_images/1768_photo.jpg",
-        "photo_count": 1,
-        "comment_count": 0,
-        "is_preorder": false,
-        "link": "https://t.me/kabi_mlp/1768",
-        "price": "90",
-        "delivery_price": null
-    },
-    {
-        "id": 1762,
-        "text": "Солд\nДуже вигідно❗️\n\nЦіна: 1150 + 100 дс\n\n#передзамовлення",
-        "photo_path": "static/doll_images/1762_photo.jpg",
-        "photo_count": 1,
-        "comment_count": 0,
-        "is_preorder": true,
-        "link": "https://t.me/kabi_mlp/1762",
-        "price": "1150",
         "delivery_price": "100"
     }
 ]

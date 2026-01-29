@@ -1,5 +1,16 @@
 [
     {
+        "id": 2418,
+        "text": "Раріті: 250\nФлатті: 250 @To_marry_Mort\nСелестія міні: 250 @GlamLee\nКаденс: 250\nЧерібері: 300 @krutaya6telka\nЧірайлі: 400 @riomy\nСелестія водяна: 500\nРаріті рп: 150 @To_marry_Mort\nДейзі: 800 \nПлумет: 400 @krutaya6telka\n\nДс до України безкоштовна\n\n#передзамовлення",
+        "photo_path": "static/doll_images/2418_photo.jpg",
+        "photo_count": 1,
+        "comment_count": 0,
+        "is_preorder": true,
+        "link": "https://t.me/kabi_mlp/2418",
+        "price": null,
+        "delivery_price": null
+    },
+    {
         "id": 2414,
         "text": "🫧 Стар свірл 🫧\n\nЦіна: 3770 + 100 дс\n\nНа даний момент найдешевша в європі\n\n#передзамовлення",
         "photo_path": "static/doll_images/2414_photo.jpg",
@@ -855,17 +866,6 @@
         "is_preorder": true,
         "link": "https://t.me/kabi_mlp/1823",
         "price": "1210",
-        "delivery_price": "100"
-    },
-    {
-        "id": 1816,
-        "text": "🫧 Лот 🫧\n\nВодяна селестія, чірайлі шарнірна, каденс\n\nЦіна: 1120 + 100 дс\n\n#передзамовлення",
-        "photo_path": "static/doll_images/1816_photo.jpg",
-        "photo_count": 5,
-        "comment_count": 0,
-        "is_preorder": true,
-        "link": "https://t.me/kabi_mlp/1816",
-        "price": "1120",
         "delivery_price": "100"
     }
 ]

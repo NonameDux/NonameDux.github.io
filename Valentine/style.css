@@ -1,0 +1,183 @@
+ /* --- НАСТРОЙКИ ДИЗАЙНА --- */
+        :root {
+            --bg: #0b0f14;
+            --text: #e8edf2;
+            --brand: #48208d; /* Фиолетовый */
+            --brand2: #be0808; /* Голубой */
+            --heart: #c11111; /* Красный для сердца */
+        }
+
+        body {
+            margin: 0;
+            background: 
+                radial-gradient(1200px 800px at 80% 10%, rgba(246, 0, 0, 0.25), transparent 60%),
+                radial-gradient(1000px 700px at 10% 90%, rgba(153, 9, 105, 0.22), transparent 55%),
+                var(--bg);
+            color: var(--text);
+            font-family: system-ui, -apple-system, sans-serif;
+            /* Сначала скролл запрещен, включим JS-ом после "Да" */
+            overflow: hidden; 
+            height: 100vh; 
+            transition: height 0s;
+        }
+
+        /* --- ЗВЕЗДЫ --- */
+        #star-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            opacity: 0.8;
+            will-change: transform, top;
+            animation: twinkle var(--duration) infinite alternate;
+        }
+
+        @keyframes twinkle {
+            from { opacity: 0.3; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1.2); }
+        }
+
+        /* --- ЭКРАН 1: ВОПРОС (Перекрывает всё) --- */
+        #screen-question {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000; /* Самый верхний слой */
+            background: rgba(11, 15, 20, 0.95); /* Чуть затемняем фон */
+            backdrop-filter: blur(10px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        .heart-beat {
+            font-size: 80px;
+            color: var(--heart);
+            animation: beat 1s infinite;
+            margin-bottom: 20px;
+            text-shadow: 0 0 30px rgba(255, 77, 109, 0.6);
+        }
+
+        @keyframes beat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 40px;
+            background: linear-gradient(135deg, #fff 30%, var(--heart) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 30px;
+            position: relative;
+        }
+
+        button {
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .btn-yes {
+            background: var(--heart);
+            color: white;
+            box-shadow: 0 0 20px rgba(255, 77, 109, 0.5);
+            transition: transform 0.2s;
+        }
+        .btn-yes:hover { transform: scale(1.1); }
+
+        .btn-no {
+            background: #2a2a2a;
+            color: #ccc;
+            /* ВАЖНО: Плавная анимация убегания */
+            transition: all 0.4s ease-out; 
+            position: relative; 
+        }
+
+        /* --- ЭКРАН 2: СКРОЛЛ КОНТЕНТ (Скрыт сначала) --- */
+        #main-content {
+            opacity: 0;
+            transition: opacity 2s ease;
+            display: none; /* Чтобы не мешал */
+        }
+
+        .section {
+            position: relative;
+            z-index: 10;
+            min-height: 100vh; /* Каждый блок на весь экран */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .big-text {
+            font-size: 4rem;
+            font-weight: bold;
+            background: linear-gradient(135deg, #fff 30%, var(--brand2) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            color: #aab9c6;
+            max-width: 600px;
+            line-height: 1.6;
+        }
+
+        /* БЛОК ДЛЯ ТВОЕГО ПИСЬМА */
+        .letter-box {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            padding: 40px;
+            border-radius: 20px;
+            max-width: 700px;
+            width: 100%;
+            text-align: left;
+            margin-top: 50px;
+            margin-bottom: 100px;
+            box-shadow: 0 0 50px rgba(0,0,0,0.3);
+        }
+
+        .letter-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            white-space: pre-wrap; /* Сохраняет абзацы */
+            color: #e8edf2;
+        }
+
+        .scroll-hint {
+            position: absolute;
+            bottom: 40px;
+            opacity: 0.6;
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(10px); } }

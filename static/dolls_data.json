@@ -1,5 +1,16 @@
 [
     {
+        "id": 2438,
+        "text": "🫧Лот егм🫧\n\nЦіна: 1780 + 200 дс\n\n#передзамовлення",
+        "photo_path": "static/doll_images/2438_photo.jpg",
+        "photo_count": 1,
+        "comment_count": 0,
+        "is_preorder": true,
+        "link": "https://t.me/kabi_mlp/2438",
+        "price": "1780",
+        "delivery_price": "200"
+    },
+    {
         "id": 2414,
         "text": "🫧 Стар свірл 🫧\n\nЦіна: 3770 + 100 дс\n\nНа даний момент найдешевша в європі\n\n#передзамовлення",
         "photo_path": "static/doll_images/2414_photo.jpg",
@@ -855,17 +866,6 @@
         "is_preorder": true,
         "link": "https://t.me/kabi_mlp/1823",
         "price": "1210",
-        "delivery_price": "100"
-    },
-    {
-        "id": 1816,
-        "text": "🫧 Лот 🫧\n\nВодяна селестія, чірайлі шарнірна, каденс\n\nЦіна: 1120 + 100 дс\n\n#передзамовлення",
-        "photo_path": "static/doll_images/1816_photo.jpg",
-        "photo_count": 5,
-        "comment_count": 0,
-        "is_preorder": true,
-        "link": "https://t.me/kabi_mlp/1816",
-        "price": "1120",
         "delivery_price": "100"
     }
 ]

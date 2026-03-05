@@ -856,16 +856,5 @@
         "link": "https://t.me/kabi_mlp/1843",
         "price": "65",
         "delivery_price": null
-    },
-    {
-        "id": 1831,
-        "text": "🫧 Лот 🫧\n\nПерсі, раріті бутік, хані з крилами, багато аксів\n\nЦіна: 1120 + 100 дс\n\n#передзамовлення",
-        "photo_path": "static/doll_images/1831_photo.jpg",
-        "photo_count": 6,
-        "comment_count": 0,
-        "is_preorder": true,
-        "link": "https://t.me/kabi_mlp/1831",
-        "price": "1120",
-        "delivery_price": "100"
     }
 ]

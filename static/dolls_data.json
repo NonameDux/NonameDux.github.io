@@ -1,5 +1,16 @@
 [
     {
+        "id": 2456,
+        "text": "🫧 Лот 🫧\n\nПрецель, г3, г2\n\nЦіна: 1060 + 200 дс\n\n#передзамовлення",
+        "photo_path": "static/doll_images/2456_photo.jpg",
+        "photo_count": 3,
+        "comment_count": 0,
+        "is_preorder": true,
+        "link": "https://t.me/kabi_mlp/2456",
+        "price": "1060",
+        "delivery_price": "200"
+    },
+    {
         "id": 2441,
         "text": "🫧 Лот 🫧\n\nФлат пасхальна, Флат брізі, Плумет, Селестія з замком, Пінкі весільна з аксами, міні селестія\n\nЦіна: 2050 + 400 дс\n\n#передзамовлення",
         "photo_path": "static/doll_images/2441_photo.jpg",

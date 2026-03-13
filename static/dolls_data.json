@@ -845,27 +845,5 @@
         "link": "https://t.me/kabi_mlp/1845",
         "price": "75",
         "delivery_price": null
-    },
-    {
-        "id": 1844,
-        "text": "🫧 Ббшки 🫧\nз ліва на право\n\nСтан: можливі не значні плямки або потертості\n\nЦіна: по 65\n\n#наявність",
-        "photo_path": "static/doll_images/1844_photo.jpg",
-        "photo_count": 1,
-        "comment_count": 0,
-        "is_preorder": false,
-        "link": "https://t.me/kabi_mlp/1844",
-        "price": "65",
-        "delivery_price": null
-    },
-    {
-        "id": 1843,
-        "text": "🫧 Ббшки 🫧\nз ліва на право\n\nСтан: можливі не значні плямки або потертості\n\nЦіна: по 65\n\n#наявність",
-        "photo_path": "static/doll_images/1843_photo.jpg",
-        "photo_count": 1,
-        "comment_count": 0,
-        "is_preorder": false,
-        "link": "https://t.me/kabi_mlp/1843",
-        "price": "65",
-        "delivery_price": null
     }
 ]

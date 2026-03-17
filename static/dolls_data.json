@@ -1,5 +1,27 @@
 [
     {
+        "id": 2517,
+        "text": "🫧 Лот 🫧\n\nПластикові бази, даймонд мінт, селестія світяшка, плейсети г3.5, брізі г1\n\nЦіна: 1130 + 250 дс\n\n#передзамовлення",
+        "photo_path": "static/doll_images/2517_photo.jpg",
+        "photo_count": 1,
+        "comment_count": 0,
+        "is_preorder": true,
+        "link": "https://t.me/kabi_mlp/2517",
+        "price": "1130",
+        "delivery_price": "250"
+    },
+    {
+        "id": 2516,
+        "text": "🫧 Лот 🫧\n\nМідоу Флавер, Корабель, Дерінг ду, міні Селестія\n\nЦіна: 1130 + 250 дс\n\n#передзамовлення",
+        "photo_path": "static/doll_images/2516_photo.jpg",
+        "photo_count": 1,
+        "comment_count": 0,
+        "is_preorder": true,
+        "link": "https://t.me/kabi_mlp/2516",
+        "price": "1130",
+        "delivery_price": "250"
+    },
+    {
         "id": 2502,
         "text": "🪄Тріксі егм🪄\nз підставкою\n\nСтан: ідеальна\n\nЦіна: 450\n\n#наявність",
         "photo_path": "static/doll_images/2502_photo.jpg",
@@ -922,16 +944,5 @@
         "link": "https://t.me/kabi_mlp/1901",
         "price": "6830",
         "delivery_price": "460"
-    },
-    {
-        "id": 1887,
-        "text": "🫧 Лот 🫧\n\nСелестія водяна, селестія інтерактивна\n\nЦіна: 920 + 100 дс\n\n#передзамовлення",
-        "photo_path": "static/doll_images/1887_photo.jpg",
-        "photo_count": 2,
-        "comment_count": 0,
-        "is_preorder": true,
-        "link": "https://t.me/kabi_mlp/1887",
-        "price": "920",
-        "delivery_price": "100"
     }
 ]

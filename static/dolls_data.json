@@ -1,5 +1,27 @@
 [
     {
+        "id": 2526,
+        "text": "🫧 Лот 🫧\n\nМінті, дью дроп стрижена, раріті рейнбоу і флатті від кантерлоту\n\nЦіна: 1550 + 100 дс\n\n#передзамовлення",
+        "photo_path": "static/doll_images/2526_photo.jpg",
+        "photo_count": 2,
+        "comment_count": 0,
+        "is_preorder": true,
+        "link": "https://t.me/kabi_mlp/2526",
+        "price": "1550",
+        "delivery_price": "100"
+    },
+    {
+        "id": 2523,
+        "text": "🫧 Лот 🫧\n\nСвіті свірл, раріті від каруселі, шайнінг та каденс весілля, плейсети г3.5\n\nЦіна: 2320 + 300 дс\n\n#передзамовлення",
+        "photo_path": "static/doll_images/2523_photo.jpg",
+        "photo_count": 3,
+        "comment_count": 0,
+        "is_preorder": true,
+        "link": "https://t.me/kabi_mlp/2523",
+        "price": "2320",
+        "delivery_price": "300"
+    },
+    {
         "id": 2502,
         "text": "🪄Тріксі егм🪄\nз підставкою\n\nСтан: ідеальна\n\nЦіна: 450\n\n#наявність",
         "photo_path": "static/doll_images/2502_photo.jpg",
@@ -878,49 +900,5 @@
         "link": "https://t.me/kabi_mlp/1917",
         "price": "120",
         "delivery_price": null
-    },
-    {
-        "id": 1905,
-        "text": "🫧 Лот 🫧\n\nПлумет крилатка, г4, г3.5, г3\n\nЦіна: 1110 + 100 дс\n\n#передзамовлення",
-        "photo_path": "static/doll_images/1905_photo.jpg",
-        "photo_count": 1,
-        "comment_count": 0,
-        "is_preorder": true,
-        "link": "https://t.me/kabi_mlp/1905",
-        "price": "1110",
-        "delivery_price": "100"
-    },
-    {
-        "id": 1903,
-        "text": "🫧Лот 🫧\n\nДью Дроп, Каденс, Флурі\n\nЦіна: 980 + 140 дс\n\n#передзамовлення",
-        "photo_path": "static/doll_images/1903_photo.jpg",
-        "photo_count": 2,
-        "comment_count": 0,
-        "is_preorder": true,
-        "link": "https://t.me/kabi_mlp/1903",
-        "price": "980",
-        "delivery_price": "140"
-    },
-    {
-        "id": 1902,
-        "text": "🫧 Лот 🫧\n\nФлатт база, Селестія, Каденс\n\nЦіна: 1390 + 130 дс\n\n#передзамовлення",
-        "photo_path": "static/doll_images/1902_photo.jpg",
-        "photo_count": 1,
-        "comment_count": 0,
-        "is_preorder": true,
-        "link": "https://t.me/kabi_mlp/1902",
-        "price": "1390",
-        "delivery_price": "130"
-    },
-    {
-        "id": 1901,
-        "text": "🫧 Лот 🫧\n\n56 поні + 1 нрфб, акси\nКоко не оріг \n\nЦіна: 6830 + 460 дс\n\n#передзамовлення",
-        "photo_path": "static/doll_images/1901_photo.jpg",
-        "photo_count": 1,
-        "comment_count": 0,
-        "is_preorder": true,
-        "link": "https://t.me/kabi_mlp/1901",
-        "price": "6830",
-        "delivery_price": "460"
     }
 ]

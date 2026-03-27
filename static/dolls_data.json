@@ -922,16 +922,5 @@
         "link": "https://t.me/kabi_mlp/1923",
         "price": "50",
         "delivery_price": null
-    },
-    {
-        "id": 1917,
-        "text": "🎉Пінкі клоун🎉\n\nСтан: чуть чуть брудненька\n\nЦіна: 120\n\n#наявність",
-        "photo_path": "static/doll_images/1917_photo.jpg",
-        "photo_count": 1,
-        "comment_count": 0,
-        "is_preorder": false,
-        "link": "https://t.me/kabi_mlp/1917",
-        "price": "120",
-        "delivery_price": null
     }
 ]

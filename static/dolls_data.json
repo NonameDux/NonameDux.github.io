@@ -1,5 +1,16 @@
 [
     {
+        "id": 2570,
+        "text": "Сансет: 700 @neoeo79\nТріксі: 700 @petrushka_chan✅\nРоуз: 400 @petrushka_chan✅\nТвай: 250 @pol_yaa_kr✅\nРейрбоу: 250 @kalinovyaa✅\n\nДс до України безкоштовна\n\n#передзамовлення",
+        "photo_path": "static/doll_images/2570_photo.jpg",
+        "photo_count": 1,
+        "comment_count": 0,
+        "is_preorder": true,
+        "link": "https://t.me/kabi_mlp/2570",
+        "price": null,
+        "delivery_price": null
+    },
+    {
         "id": 2563,
         "text": "25. 140 @dighti✅\n26. 200 @mia234k🌸\n27. 400 @kilka_tomatnaya✅\n28. 200 @riomy✅\n29. 120 @Inkahiro✅\n30. 200 @mirayn_mari✅\n31. 150 @vawhhk\n32. 200 @qazwsx12634✅\n33. 150 @vawhhk\n34. 200 + обруч @vawhhk\n35. 210 + обруч @katorichi✅\n36. 350 @goshikkurori✅\n37. 290 @lylypsy✅\n38. 140 @lylypsy✅\n39. 300 @hellsee944✅\n40. 500 @elinesvi✅\n41. 500 @andrewl0ver✅\n42. 400 @goshikkurori✅\n43. 140 @Corvus_006✅\n44. 350 + корона @qazwsx12634✅\n45. 250 @dighti✅\n46. 90 @nataliia_kritsak✅\n47. 90 @KaryChery✅\n48. 200 @dighti✅\n49. 1300 @last_valkyriee✅\n\nДс до України безкоштовна\n\n#передзамовлення",
         "photo_path": null,
@@ -822,50 +833,6 @@
         "is_preorder": false,
         "link": "https://t.me/kabi_mlp/1943",
         "price": "430",
-        "delivery_price": null
-    },
-    {
-        "id": 1937,
-        "text": "💎Раріті резина💎\n\nСтан: плямка на вусі, дф на копиті\n\nЦіна: 130\n\n#наявність",
-        "photo_path": "static/doll_images/1937_photo.jpg",
-        "photo_count": 1,
-        "comment_count": 0,
-        "is_preorder": false,
-        "link": "https://t.me/kabi_mlp/1937",
-        "price": "130",
-        "delivery_price": null
-    },
-    {
-        "id": 1936,
-        "text": "✨Твайлайт рп✨\n\nСтан: міні плямка, одне крило\n\nЦіна: 100\n\n#наявність",
-        "photo_path": "static/doll_images/1936_photo.jpg",
-        "photo_count": 1,
-        "comment_count": 0,
-        "is_preorder": false,
-        "link": "https://t.me/kabi_mlp/1936",
-        "price": "100",
-        "delivery_price": null
-    },
-    {
-        "id": 1935,
-        "text": "✨Твайлайт✨\n\nСтан: немає крил, підтерта кьюті\n\nЦіна: 100\n\n#наявність",
-        "photo_path": "static/doll_images/1935_photo.jpg",
-        "photo_count": 1,
-        "comment_count": 0,
-        "is_preorder": false,
-        "link": "https://t.me/kabi_mlp/1935",
-        "price": "100",
-        "delivery_price": null
-    },
-    {
-        "id": 1934,
-        "text": "🌈Рейнбоу сікрет сцена🌈\n\nСтан: стрижена, гривка жорстка\n\nЦіна: 60\n\n#наявність",
-        "photo_path": "static/doll_images/1934_photo.jpg",
-        "photo_count": 1,
-        "comment_count": 0,
-        "is_preorder": false,
-        "link": "https://t.me/kabi_mlp/1934",
-        "price": "60",
         "delivery_price": null
     }
 ]

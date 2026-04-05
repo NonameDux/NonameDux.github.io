@@ -1,5 +1,16 @@
 [
     {
+        "id": 2583,
+        "text": "Стар Свірл і Світі Свірл\n\nЦіна: 3830 + 200 дс\n\n#передзамовлення",
+        "photo_path": "static/doll_images/2583_photo.jpg",
+        "photo_count": 1,
+        "comment_count": 0,
+        "is_preorder": true,
+        "link": "https://t.me/kabi_mlp/2583",
+        "price": "3830",
+        "delivery_price": "200"
+    },
+    {
         "id": 2570,
         "text": "Сансет: 700 @neoeo79\nТріксі: 700 @petrushka_chan✅\nРоуз: 400 @petrushka_chan✅\nТвай: 250 @pol_yaa_kr✅\nРейрбоу: 250 @kalinovyaa✅\n\nДс до України безкоштовна\n\n#передзамовлення",
         "photo_path": "static/doll_images/2570_photo.jpg",
@@ -823,16 +834,5 @@
         "link": "https://t.me/kabi_mlp/1956",
         "price": "1950",
         "delivery_price": "200"
-    },
-    {
-        "id": 1943,
-        "text": "💎Раріті з каретою💎\n\nСтан: раріті чуть брудненька, на кареті не значні потертості, міні дф на оці\n\nЦіна: 430\n\n#наявність",
-        "photo_path": "static/doll_images/1943_photo.jpg",
-        "photo_count": 2,
-        "comment_count": 0,
-        "is_preorder": false,
-        "link": "https://t.me/kabi_mlp/1943",
-        "price": "430",
-        "delivery_price": null
     }
 ]

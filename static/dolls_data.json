@@ -1,5 +1,16 @@
 [
     {
+        "id": 2626,
+        "text": "🫧Лот 🫧\n\nЛуна водна\n\nЦіна: 1490 + 100 дс\n\n#передзамовлення",
+        "photo_path": "static/doll_images/2626_photo.jpg",
+        "photo_count": 1,
+        "comment_count": 0,
+        "is_preorder": true,
+        "link": "https://t.me/kabi_mlp/2626",
+        "price": "1490",
+        "delivery_price": "100"
+    },
+    {
         "id": 2583,
         "text": "Стар Свірл і Світі Свірл\n\nЦіна: 3830 + 200 дс\n\n#передзамовлення",
         "photo_path": "static/doll_images/2583_photo.jpg",
@@ -823,16 +834,5 @@
         "link": "https://t.me/kabi_mlp/1959",
         "price": "2460",
         "delivery_price": "260"
-    },
-    {
-        "id": 1956,
-        "text": "🫧 Лот 🫧\n\nЧері бері перламутр, Епл водяна, Твай з потягом, Пінкі з лебедем, г1, г3 \n\nЦіна: 1950 + 200 дс\n\n#передзамовлення",
-        "photo_path": "static/doll_images/1956_photo.jpg",
-        "photo_count": 3,
-        "comment_count": 0,
-        "is_preorder": true,
-        "link": "https://t.me/kabi_mlp/1956",
-        "price": "1950",
-        "delivery_price": "200"
     }
 ]

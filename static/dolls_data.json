@@ -1,5 +1,27 @@
 [
     {
+        "id": 2636,
+        "text": "1. 50\n2. 180\n3. 120\n4. 50\n5. 180 @KaryChery\n6. 180 @polya_kozlova\n7. 180\n8. 180 @polya_kozlova\n9. 180\n10. 120\n11. 180\n12. 50\n13. 350 @polya_kozlova\n14. 350\n15. 50 @KaryChery\n16. 170\n17. 50\n18. 50\n19. 400 @Dauona\n20. 50\n21. 50\nПотяг: 280\nХатка: 70\nМушля з пінкі: 150\n\nДс до України врахована\n\n#передзамовлення",
+        "photo_path": "static/doll_images/2636_photo.jpg",
+        "photo_count": 2,
+        "comment_count": 0,
+        "is_preorder": true,
+        "link": "https://t.me/kabi_mlp/2636",
+        "price": null,
+        "delivery_price": null
+    },
+    {
+        "id": 2633,
+        "text": "🫧 Лот 🫧\n\nФлат крилатка, Твайлайт з підігнутим, Світі бель, потяг, Каденс, скоріше за все пластикові бази\n\nЦіна: 2750 + 300 дс\n\n#передзамовлення",
+        "photo_path": "static/doll_images/2633_photo.jpg",
+        "photo_count": 3,
+        "comment_count": 0,
+        "is_preorder": true,
+        "link": "https://t.me/kabi_mlp/2633",
+        "price": "2750",
+        "delivery_price": "300"
+    },
+    {
         "id": 2626,
         "text": "🫧Лот 🫧\n\nЛуна водна\n\nЦіна: 1490 + 100 дс\n\n#передзамовлення",
         "photo_path": "static/doll_images/2626_photo.jpg",
@@ -812,27 +834,5 @@
         "link": "https://t.me/kabi_mlp/1976",
         "price": "3680",
         "delivery_price": "100"
-    },
-    {
-        "id": 1965,
-        "text": "🫧 Лот 🫧\n\nСкай Вішез кмм, Твай база, Хані з крилами, водяні\n\nЦіна: 2050 + 150 дс\n\n#передзамовлення",
-        "photo_path": "static/doll_images/1965_photo.jpg",
-        "photo_count": 1,
-        "comment_count": 0,
-        "is_preorder": true,
-        "link": "https://t.me/kabi_mlp/1965",
-        "price": "2050",
-        "delivery_price": "150"
-    },
-    {
-        "id": 1959,
-        "text": "🫧Лот🫧\n\nТріксі кмм, Стар Дрімс, Блос водяна, Світі Бель \n\nЦіна: 2460 + 260 дс\n\n#передзамовлення",
-        "photo_path": "static/doll_images/1959_photo.jpg",
-        "photo_count": 1,
-        "comment_count": 0,
-        "is_preorder": true,
-        "link": "https://t.me/kabi_mlp/1959",
-        "price": "2460",
-        "delivery_price": "260"
     }
 ]

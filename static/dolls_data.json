@@ -1,5 +1,38 @@
 [
     {
+        "id": 2655,
+        "text": "🫧Лот 🫧\n\nДаймонд Роуз, Деш та Дейзі крилатки, Твайлайт фешн\n\nЦіна: 4800+ 200 дс\n\n#передзамовлення",
+        "photo_path": "static/doll_images/2655_photo.jpg",
+        "photo_count": 5,
+        "comment_count": 0,
+        "is_preorder": true,
+        "link": "https://t.me/kabi_mlp/2655",
+        "price": "4800",
+        "delivery_price": "200"
+    },
+    {
+        "id": 2654,
+        "text": "🫧 Лот 🫧\n\nзамок, Світі Бель, Епл Джек тревел з валізою\n\nЦіна: 820 + 200 дс\n\n#передзамовлення",
+        "photo_path": "static/doll_images/2654_photo.jpg",
+        "photo_count": 1,
+        "comment_count": 0,
+        "is_preorder": true,
+        "link": "https://t.me/kabi_mlp/2654",
+        "price": "820",
+        "delivery_price": "200"
+    },
+    {
+        "id": 2644,
+        "text": "🫧 Лот 🫧\n\nСвіті бель чолкаста, Раріті бутік, Раріті бутік ребут, Пінкі вертоліт, Пінкі шайн брайт, купа г3.5 і плейсетів\n\nЦіна: 3800 + 400 дс\n\n#передзамовлення",
+        "photo_path": "static/doll_images/2644_photo.jpg",
+        "photo_count": 10,
+        "comment_count": 0,
+        "is_preorder": true,
+        "link": "https://t.me/kabi_mlp/2644",
+        "price": "3800",
+        "delivery_price": "400"
+    },
+    {
         "id": 2626,
         "text": "🫧Лот 🫧\n\nЛуна водна\n\nЦіна: 1490 + 100 дс\n\n#передзамовлення",
         "photo_path": "static/doll_images/2626_photo.jpg",
@@ -779,49 +812,5 @@
         "link": "https://t.me/kabi_mlp/1985",
         "price": "1610",
         "delivery_price": "100"
-    },
-    {
-        "id": 1981,
-        "text": "🫧 Лот 🫧\n\nкінотеатр егм, Селестія, Твай велика з аксами, Флат розмальовка\n\nЦіна: 990 + 200 дс\n\n#передзамовлення",
-        "photo_path": "static/doll_images/1981_photo.jpg",
-        "photo_count": 4,
-        "comment_count": 0,
-        "is_preorder": true,
-        "link": "https://t.me/kabi_mlp/1981",
-        "price": "990",
-        "delivery_price": "200"
-    },
-    {
-        "id": 1980,
-        "text": "🫧 Сансет нрфб 🫧\n\nЦіна: 775 + 100 дс\n\n#передзамовлення",
-        "photo_path": "static/doll_images/1980_photo.jpg",
-        "photo_count": 1,
-        "comment_count": 0,
-        "is_preorder": true,
-        "link": "https://t.me/kabi_mlp/1980",
-        "price": "775",
-        "delivery_price": "100"
-    },
-    {
-        "id": 1976,
-        "text": "🫧 Холі Деш 🫧\n\nЦіна: 3680 + 100 дс\n\n#передзамовлення \n\nЯ знаю, що в Україні можна взяти дешевше, але на даний момент це найдешевший варіант в Європі\nСкоріше для тих, хто хоче холі тут і зарад",
-        "photo_path": "static/doll_images/1976_photo.jpg",
-        "photo_count": 3,
-        "comment_count": 0,
-        "is_preorder": true,
-        "link": "https://t.me/kabi_mlp/1976",
-        "price": "3680",
-        "delivery_price": "100"
-    },
-    {
-        "id": 1965,
-        "text": "🫧 Лот 🫧\n\nСкай Вішез кмм, Твай база, Хані з крилами, водяні\n\nЦіна: 2050 + 150 дс\n\n#передзамовлення",
-        "photo_path": "static/doll_images/1965_photo.jpg",
-        "photo_count": 1,
-        "comment_count": 0,
-        "is_preorder": true,
-        "link": "https://t.me/kabi_mlp/1965",
-        "price": "2050",
-        "delivery_price": "150"
     }
 ]

@@ -1,5 +1,16 @@
 [
     {
+        "id": 2730,
+        "text": "🫧 Лот 🫧\n\nСвіті свірл, епл перламутр, епл водяна, міні селестія, світі бель, плюшки\n\nЦіна: 2480 + 250 дс\n\n#передзамовлення",
+        "photo_path": "static/doll_images/2730_photo.jpg",
+        "photo_count": 1,
+        "comment_count": 0,
+        "is_preorder": true,
+        "link": "https://t.me/kabi_mlp/2730",
+        "price": "2480",
+        "delivery_price": "250"
+    },
+    {
         "id": 2685,
         "text": "🫧 Пінкі від вертольоту 🫧\n\nСтан: пухнасті кінчики\n\nЦіна: 140\n\n#наявність",
         "photo_path": "static/doll_images/2685_photo.jpg",
@@ -690,17 +701,6 @@
         "is_preorder": false,
         "link": "https://t.me/kabi_mlp/2058",
         "price": "1450",
-        "delivery_price": null
-    },
-    {
-        "id": 2055,
-        "text": "🌸Флаттершай пасхальна🌸\n\nСтан: трохи стрижений хвостик, міні цятка\n\nЦіна: 600\n\n#наявність",
-        "photo_path": "static/doll_images/2055_photo.jpg",
-        "photo_count": 1,
-        "comment_count": 0,
-        "is_preorder": false,
-        "link": "https://t.me/kabi_mlp/2055",
-        "price": "600",
         "delivery_price": null
     }
 ]

@@ -1,5 +1,16 @@
 [
     {
+        "id": 2736,
+        "text": "🫧 Лот 🫧\n\nСансет, Твай супергерой, плейсет г3.5\n\nЦіна: 1100 + 200 дс\n\n#передзамовлення",
+        "photo_path": "static/doll_images/2736_photo.jpg",
+        "photo_count": 1,
+        "comment_count": 0,
+        "is_preorder": true,
+        "link": "https://t.me/kabi_mlp/2736",
+        "price": "1100",
+        "delivery_price": "200"
+    },
+    {
         "id": 2685,
         "text": "🫧 Пінкі від вертольоту 🫧\n\nСтан: пухнасті кінчики\n\nЦіна: 140\n\n#наявність",
         "photo_path": "static/doll_images/2685_photo.jpg",

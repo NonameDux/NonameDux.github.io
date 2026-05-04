@@ -1,5 +1,16 @@
 [
     {
+        "id": 2745,
+        "text": "З підставками: \nКаденс: 200 @peirnk\nТріксі: 200 @Pisechka676\nТвайлайт: 130\nТвайлайт русалка: 130\nФлатті егм: 130 @andrewl0ver\nСелестія: 200 @peirnk\nЕпл джек русалка: 130\nРейнбоу егм: 120 @white_tail\nТортик від твайлайт: 40 @To_marry_Mort\n\nБез:\nЛуна: 150 @Alinelix\nЛуна 2: 150 @Cthulhu707\nРейнбоу: 50 @kiss_freak\nРаріті: 50 @To_marry_Mort\nРаріті 2: 50 @mia234k\nРейнбоу русалка: 50 @white_tail\nБонбон: 100 @Pisechka676\nРаріті егм: 60\nРаріті егм 2: 60\nСансет: 150 @neoeo79\nЕпл джек: 50 @mia234k\nФлаттершай: 60 @andrewl0ver\nБігмак: 50 @To_marry_Mort\nРейнбоу: 50 @white_tail\nДіджей: 150\nБб: 150 @Anneliese_01\n\nДс до України безкоштовна \n\n#передзамовлення",
+        "photo_path": "static/doll_images/2745_photo.jpg",
+        "photo_count": 1,
+        "comment_count": 0,
+        "is_preorder": true,
+        "link": "https://t.me/kabi_mlp/2745",
+        "price": null,
+        "delivery_price": null
+    },
+    {
         "id": 2736,
         "text": "🫧 Лот 🫧\n\nСансет, Твай супергерой, плейсет г3.5\n\nЦіна: 1100 + 200 дс\n\n#передзамовлення",
         "photo_path": "static/doll_images/2736_photo.jpg",
@@ -690,17 +701,6 @@
         "is_preorder": false,
         "link": "https://t.me/kabi_mlp/2066",
         "price": "800",
-        "delivery_price": null
-    },
-    {
-        "id": 2058,
-        "text": "🌟Старбім🌟\nз оріг аксами\n\nСтан: ідеальна, декілька коротких волосин\n\nЦіна: 1450\n\n#наявність",
-        "photo_path": "static/doll_images/2058_photo.jpg",
-        "photo_count": 2,
-        "comment_count": 0,
-        "is_preorder": false,
-        "link": "https://t.me/kabi_mlp/2058",
-        "price": "1450",
         "delivery_price": null
     }
 ]
